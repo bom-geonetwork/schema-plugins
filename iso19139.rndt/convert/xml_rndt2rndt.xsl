@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"
-                xmlns:gml="http://www.opengis.net/gml"
+                xmlns:gml="http://www.opengis.net/gml/3.2"
                 xmlns:srv="http://www.isotc211.org/2005/srv"
                 xmlns:gmx="http://www.isotc211.org/2005/gmx"
                 xmlns:gco="http://www.isotc211.org/2005/gco"
@@ -20,6 +20,8 @@
 		<xsl:apply-templates select="gmd:MD_Metadata"/>
 	</xsl:template>
 
+    <xsl:variable name="isSrv" select="boolean(//srv:*)"/>
+
 	<!-- ================================================================= -->
 
 	<!-- sanitize namespaces -->
@@ -29,11 +31,22 @@
 			<xsl:namespace name="gmd" select="'http://www.isotc211.org/2005/gmd'"/>
 			<xsl:namespace name="gco" select="'http://www.isotc211.org/2005/gco'"/>
 			<xsl:namespace name="gmx" select="'http://www.isotc211.org/2005/gmx'"/>
-			<xsl:namespace name="srv" select="'http://www.isotc211.org/2005/srv'"/>
+            <xsl:if test="$isSrv">
+                <xsl:namespace name="srv" select="'http://www.isotc211.org/2005/srv'"/>
+            </xsl:if>
 			<xsl:namespace name="gml" select="'http://www.opengis.net/gml/3.2'"/>
 			<xsl:namespace name="xlink" select="'http://www.w3.org/1999/xlink'"/>
 			<xsl:copy-of select="@*[name()!='xsi:schemaLocation' and name()!='gco:isoType']"/>
-			<xsl:attribute name="xsi:schemaLocation">http://www.isotc211.org/2005/gmd http://www.isotc211.org/2005/gmd/gmd.xsd http://www.isotc211.org/2005/srv http://schemas.opengis.net/iso/19139/20060504/srv/srv.xsd</xsl:attribute>
+
+            <xsl:choose>
+                <xsl:when test="$isSrv">
+                    <xsl:attribute name="xsi:schemaLocation">http://www.isotc211.org/2005/gmd http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gmd/gmd.xsd http://www.isotc211.org/2005/srv http://schemas.opengis.net/iso/19139/20060504/srv/srv.xsd</xsl:attribute>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:attribute name="xsi:schemaLocation">http://www.isotc211.org/2005/gmd http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gmd/gmd.xsd</xsl:attribute>
+                </xsl:otherwise>
+            </xsl:choose>
+
 			<xsl:apply-templates select="gmd:fileIdentifier"/>
 			<xsl:apply-templates select="gmd:language"/>
 			<xsl:apply-templates select="gmd:characterSet"/>
@@ -49,18 +62,45 @@
 					</xsl:choose>					
 				</gco:CharacterString>
 			</gmd:parentIdentifier>
-			<xsl:apply-templates select="child::* except (gmd:fileIdentifier|gmd:language|gmd:characterSet|gmd:parentIdentifier)"/>
+			<xsl:apply-templates select="child::* except (gmd:fileIdentifier|gmd:parentIdentifier|gmd:language|gmd:characterSet)"/>
+			<!-- <xsl:apply-templates select="//*[not(self::gmd:fileIdentifier)|not(self::gmd:language)|not(self::gmd:characterSet)]"/> -->
 		</xsl:element>
 	</xsl:template>
+
+	<!-- =================================================================== -->
+
+    <!-- Generic node -->
+
+	<xsl:template match="@*|node()">
+		<xsl:copy copy-namespaces="no">
+			<xsl:apply-templates select="@*|node()"/>
+		</xsl:copy>
+	</xsl:template>
+
+	<!-- Remove geonet's own stuff -->
+
+    <xsl:template match="geonet:info" priority="100"/>
 
 	<!-- ================================================================= -->
 	<!-- Convert gml URI -->
 
-	<xsl:template match="gml:*">
+	<!--<xsl:template match="gml:*">
 		<xsl:element name="{concat('gml:', local-name(.))}" namespace="http://www.opengis.net/gml/3.2">
 			<xsl:apply-templates select="node()|@*"/>
 		</xsl:element>
-	</xsl:template>
+	</xsl:template>-->
+	
+    <xsl:template match="@*[namespace-uri()='http://www.opengis.net/gml']">
+        <xsl:attribute name="gml:{local-name()}">
+            <xsl:value-of select="."/>
+        </xsl:attribute>
+    </xsl:template>
+     
+    <xsl:template match="*[namespace-uri()='http://www.opengis.net/gml']">
+        <xsl:element name="gml:{local-name()}">
+            <xsl:apply-templates select="node()|@*"/>
+        </xsl:element>
+    </xsl:template>
 
 	<!-- =================================================================== -->
 	<!-- Fix gmd:parentIdentifier -->
@@ -73,22 +113,11 @@
 			</gmd:parentIdentifier>
 		</xsl:copy>
 	</xsl:template> -->
-	<!-- =================================================================== -->
-
-	<xsl:template match="@*|node()">
-		<xsl:copy copy-namespaces="no">
-			<xsl:apply-templates select="@*|node()"/>
-		</xsl:copy>
-	</xsl:template>
 
 	<!-- ================================================================= -->
+	<!-- Manage the gmd:pass -->
 	
-	<!-- Remove geonet's own stuff -->
-	<xsl:template match="geonet:info" priority="100"/>
-
-	<!-- ================================================================= -->
-	
-<!--	<xsl:template match="gmd:DQ_ConformanceResult">
+    <!--<xsl:template match="gmd:DQ_ConformanceResult">
 		<xsl:choose>
 			<xsl:when test="not(exists(gmd:pass))">
 				<xsl:copy>
@@ -117,7 +146,7 @@
 		</xsl:choose>
 	</xsl:template>-->
 	
-	<!-- Use 'nilReason' to unknown for the pass element in un-compiled conformance -->	
+	<!-- Use 'nilReason' to unknown for the pass element in un-compiled conformance 	
 	<xsl:template match="gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:DQ_ConformanceResult/gmd:pass">
 		<xsl:choose>
 			<xsl:when test="../gmd:explanation/gco:CharacterString='non valutato'">
@@ -132,7 +161,7 @@
 				</xsl:copy>
 			</xsl:otherwise>
 		</xsl:choose>
-	</xsl:template>
+	</xsl:template>-->
 	
 	<!-- ================================================================= -->
 	

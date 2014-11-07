@@ -344,12 +344,7 @@
             <xsl:apply-templates select="@*[name(.)!='codeList']"/>
 
             <!-- add a node text-->
-            <xsl:if test="string-length()=0">
-                <xsl:value-of select="@codeListValue"/>
-            </xsl:if>
-            <xsl:if test="string-length()>0">
-                <xsl:value-of select="."/>
-            </xsl:if>
+            <xsl:value-of select="@codeListValue"/>
         </gmd:LanguageCode>
     </xsl:template>
 
@@ -361,12 +356,7 @@
             </xsl:attribute>
 
             <!-- add a node text-->
-            <xsl:if test="string-length()=0">
-                <xsl:value-of select="@codeListValue"/>
-            </xsl:if>
-            <xsl:if test="string-length()>0">
-                <xsl:value-of select="."/>
-            </xsl:if>
+            <xsl:value-of select="@codeListValue"/>
         </xsl:copy>
     </xsl:template>
 
@@ -380,12 +370,7 @@
             </xsl:attribute>
 
             <!-- add a node text-->
-            <xsl:if test="string-length()=0">
-                <xsl:value-of select="@codeListValue"/>
-            </xsl:if>
-            <xsl:if test="string-length()>0">
-                <xsl:value-of select="."/>
-            </xsl:if>
+            <xsl:value-of select="@codeListValue"/>
         </xsl:copy>
     </xsl:template>
 
@@ -481,11 +466,23 @@
     <!-- Do not allow to expand operatesOn sub-elements
     and constrain users to use uuidref attribute to link
     service metadata to datasets. This will avoid to have
-    error on XSD validation. -->
+    error on XSD validation. -->	
     <xsl:template match="srv:operatesOn">
-        <xsl:copy>
-            <xsl:copy-of select="@*"/>
-        </xsl:copy>
+		<xsl:choose>
+			<xsl:when test=".[not(@uuidref)]">
+				<xsl:copy>
+					<xsl:attribute name="uuidref">
+						<xsl:value-of select="''"/>
+					</xsl:attribute>
+					<xsl:apply-templates select="@*"/>
+				</xsl:copy>
+			</xsl:when>
+			<xsl:otherwise>
+			    <xsl:copy>
+					<xsl:copy-of select="@*"/>
+				</xsl:copy>
+			</xsl:otherwise>
+		</xsl:choose>
     </xsl:template>
 
 
@@ -583,6 +580,96 @@
         </gco:CharacterString>
     </xsl:template>
 
+    <!-- Don't save some gmd:thesaurusName|gmd:MD_Keywords sub elements because not required by RNDT -->
+    <xsl:template match="gmd:thesaurusName/gmd:CI_Citation/gmd:identifier"/>
+    <xsl:template match="gmd:MD_Keywords/gmd:type"/>
+    <!-- ======== -->
+    
+    <xsl:template match="gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:DQ_ConformanceResult/gmd:pass">
+        <xsl:choose>
+            <xsl:when test="../gmd:explanation/gco:CharacterString='non valutato'">
+                <!--<xsl:copy>
+                    <xsl:attribute name="nilReason">unknown</xsl:attribute>
+                </xsl:copy>
+                <xsl:comment>Conformance non compilata</xsl:comment>-->
+                <xsl:element name="gmd:pass">
+                    <xsl:text></xsl:text>
+                    <xsl:attribute name="gco:nilReason">unknown</xsl:attribute>
+                </xsl:element>
+            </xsl:when>
+            <xsl:otherwise>
+                <!--<xsl:copy>
+                    <xsl:apply-templates select="@*|node()"/>
+                </xsl:copy>-->
+                <xsl:call-template name="create_pass"></xsl:call-template>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template name="create_pass">
+        <xsl:element name="gmd:pass">
+            <xsl:choose>
+                <xsl:when test="../gmd:explanation/gco:CharacterString='conforme'">
+                    <xsl:element name="gco:Boolean">
+                        <xsl:text>true</xsl:text>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:element name="gco:Boolean">
+                        <xsl:text>false</xsl:text>
+                    </xsl:element>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:element>        
+    </xsl:template>
+
+    <!-- ================================================================= -->
+    <!-- transform datoPubblico as requested by specs -->
+
+<!--        <gmd:resourceConstraints>
+				<gmd:MD_LegalConstraints>
+					<gmd:accessConstraints>
+						<gmd:MD_RestrictionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#MD_RestrictionCode" codeListValue="trademark">trademark</gmd:MD_RestrictionCode>
+					</gmd:accessConstraints>
+					<gmd:useConstraints>
+						<gmd:MD_RestrictionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</gmd:MD_RestrictionCode>
+					</gmd:useConstraints>
+					<gmd:otherConstraints>
+						<gco:CharacterString>Dato pubblico</gco:CharacterString>
+					</gmd:otherConstraints>-->
+
+    <xsl:template match="gmd:resourceConstraints[.//gmd:MD_RestrictionCode/@codeListValue='datoPubblico']">
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()" mode="datoPubblico"/>
+        </xsl:copy>
+    </xsl:template>
+
+       <!-- forza otherConstraints a Dato pubblico, che esista o no -->
+    <xsl:template match="gmd:MD_LegalConstraints" mode="datoPubblico">
+        <xsl:copy>
+            <xsl:apply-templates select="child::* except (gmd:otherConstraints)" mode="datoPubblico"/>
+
+            <gmd:otherConstraints>
+                <gco:CharacterString>Dato pubblico</gco:CharacterString>
+            </gmd:otherConstraints>
+        </xsl:copy>
+
+    </xsl:template>
+
+       <!-- replace MD_RestrictionCode codeListValue-->
+    <xsl:template match="gmd:MD_RestrictionCode[@codeListValue='datoPubblico']" mode="datoPubblico">
+        <gmd:MD_RestrictionCode
+            codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#MD_RestrictionCode"
+            codeListValue="otherRestrictions">otherRestrictions"</gmd:MD_RestrictionCode>
+    </xsl:template>
+
+       <!-- copy everything else as is -->
+    <xsl:template match="@*|node()" mode="datoPubblico">
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()" mode="datoPubblico"/>
+        </xsl:copy>
+    </xsl:template>
+    
     <!-- ================================================================= -->
     <!-- copy everything else as is -->
 
