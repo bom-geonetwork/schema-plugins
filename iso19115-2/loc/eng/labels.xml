@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../../labels.xsd"
+	xmlns:gmi="http://www.isotc211.org/2005/gmi"
+	xmlns:gml32="http://www.opengis.net/gml/3.2">
+
+	<!-- Add gmi: labels -->
+
+	<element name="gml32:beginPosition">
+		<label>Begin date</label>
+		<description>Formatted as 2007-09-12T15:00:00 (YYYY-MM-DDTHH:mm:ss)</description>
+	</element>
+
+	<element name="gml32:endPosition">
+		<label>End date</label>
+		<description>Formatted as 2007-09-12T15:00:00 (YYYY-MM-DDTHH:mm:ss)</description>
+	</element>
+
+	<element name="gml32:relatedTime">
+		<label>Related time</label>
+		<description>Defines the relation of a given time to the object.</description>
+	</element>
+
+	<element name="gml32:coordinates">
+		<label>Coordinates</label>
+		<description>Used to record an array of tuples or coordinates.</description>
+	</element>
+
+	<element name="gml32:Polygon">
+		<label>Polygon</label>
+		<description>A gml32:Polygon is a special surface that is defined by a single surface patch.
+            The boundary of this patch is coplanar and the polygon uses planar interpolation in its
+            interior.</description>
+	</element>
+
+	<element name="gml32:Point">
+		<label>Point</label>
+		<description>A gml32:Point is defined by a single coordinate tuple.</description>
+		<example>74. -37.</example>
+	</element>
+
+	<element name="gml32:LineString">
+		<label>Line</label>
+		<description>A gml32:LineString is a special curve that consists of a single segment with
+            linear interpolation. It is defined by two or more coordinate tuples, with linear
+            interpolation between them.</description>
+	</element>
+
+	<element name="gml32:LinearRing">
+		<label>Linear ring</label>
+		<description>A gml32:LinearRing is defined by four or more coordinate tuples, with linear
+            interpolation between them; the first and last coordinates shall be
+            coincident.</description>
+	</element>
+
+	<element name="gml32:exterior">
+		<label>Outer boundary</label>
+		<description>The outer boundary of a solid.</description>
+	</element>
+
+	<element name="gml32:interior">
+		<label>Inner boundary</label>
+		<description>The inner boundary of a solid</description>
+	</element>
+
+
+	<element name="gml32:begin">
+		<label>Begin</label>
+		<description />
+	</element>
+	<element name="gml32:end">
+		<label>End</label>
+		<description />
+	</element>
+	<element name="gml32:duration">
+		<label>Duration</label>
+		<description>Conforms to the ISO 8601 syntax for temporal length as implemented by the XML Schema duration type.</description>
+	</element>
+	<element name="gml32:timeInterval">
+		<label>Time interval</label>
+		<description>conforms to ISO 11404 which is based on floating point values for temporal length.
+    		ISO 11404 syntax specifies the use of a positiveInteger together with appropriate values for radix and factor. The resolution of the time interval is to one radix ^(-factor) of the specified time unit.
+    		The value of the unit is either selected from the units for time intervals from ISO 31-1:1992, or is another suitable unit.  The encoding is defined for GML in gml32:TimeUnitType. The second component of this union type provides a method for indicating time units other than the six standard units given in the enumeration.</description>
+	</element>
+	<element name="gml32:name">
+		<label>Name</label>
+		<description></description>
+	</element>
+	<element name="gml32:metaDataProperty">
+		<label>Metadata property</label>
+		<description></description>
+	</element>
+	<element name="gml32:identifier">
+		<label>Identifier</label>
+		<description></description>
+	</element>
+	<element name="gml32:description">
+		<label>Description</label>
+		<description>Text description of the element</description>
+	</element>
+	<element name="gml32:descriptionReference">
+		<label>Description reference</label>
+		<description></description>
+	</element>
+	<element name="gml32:TimeInstant">
+		<label>Time instant</label>
+		<description />
+	</element>
+	<element name="gml32:TimePosition">
+		<label>Time position</label>
+		<description />
+	</element>
+	<element name="gml32:timePosition">
+		<label>Time position</label>
+		<description />
+	</element>
+	<element name="gml32:TimePeriod">
+		<label>Time period</label>
+		<description />
+	</element>
+	<element name="gml32:TimeNode">
+		<label>Time node</label>
+		<description />
+	</element>
+	<element name="gml32:TimeEdge">
+		<label>Time edge</label>
+		<description />
+	</element>
+	<element name="gml32:ProjectedCRS">
+		<label>Projected CRS</label>
+		<description />
+	</element>
+
+	<element name="gml32:id">
+		<label>Identifier</label>
+		<description>Unique identifier</description>
+	</element>
+
+	<element name="gml32:id" id="191.0" context="gmd:MD_CRS">
+		<label>Ellipsoid</label>
+		<description>Identity of the ellipsoid used</description>
+		<help>identity of the ellipsoid used</help>
+	</element>
+    <element name="gml32:axis">
+        <label>Axis</label>
+    </element>
+    <element name="gml32:axisAbbrev">
+        <label>Axis abbreviation</label>
+    </element>
+    <element name="gml32:axisDirection">
+        <label>Axis direction</label>
+    </element>
+    <element name="gml32:maximumValue">
+        <label>Maximum value</label>
+    </element>
+    <element name="gml32:minimumValue">
+        <label>Minimum value</label>
+    </element>
+    <element name="gml32:scope">
+        <label>Scope</label>
+    </element>
+    <element name="gml32:VerticalCRS">
+        <label>Vertical CRS</label>
+    </element>
+    <element name="gml32:remarks">
+        <label>Remarks</label>
+    </element>
+    <element name="gml32:domainOfValidity">
+        <label>Domain of validity</label>
+    </element>
+    <element name="gml32:verticalCS">
+        <label>Vertical CS</label>
+    </element>
+    <element name="gml32:VerticalCS">
+        <label>Vertical CS</label>
+    </element>
+    <element name="gml32:CoordinateSystemAxis">
+        <label>Coordinate system axis</label>
+    </element>
+    <element name="gml32:rangeMeaning">
+        <label>Range meaning</label>
+    </element>
+    <element name="gml32:verticalDatum">
+        <label>Vertical datum</label>
+    </element>
+    <element name="gml32:VerticalDatum">
+        <label>Vertical datum</label>
+    </element>
+    <element name="gml32:realizationEpoch">
+        <label>Realization epoch</label>
+    </element>
+    <!-- ==================================================== -->
+    <element name="gml32:TimePeriodTypeCHOICE_ELEMENT2">
+      <label>Begin time</label>
+      <description>Choose the begin time element</description>
+    </element>
+    <!-- ==================================================== -->
+    <element name="gml32:TimePeriodTypeCHOICE_ELEMENT3">
+      <label>End Time</label>
+      <description>Choose the end time element</description>
+    </element>
+</labels>
