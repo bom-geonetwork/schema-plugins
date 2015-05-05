@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xsl:stylesheet version="2.0" xmlns:gmd="http://www.isotc211.org/2005/gmd"
     xmlns:gco="http://www.isotc211.org/2005/gco" 
-		xmlns:gml="http://www.opengis.net/gml/3.2"
+		xmlns:gml32="http://www.opengis.net/gml/3.2"
     xmlns:srv="http://www.isotc211.org/2005/srv" 
 		xmlns:geonet="http://www.fao.org/geonetwork"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
@@ -45,11 +45,11 @@
 
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
-		<xsl:template mode="index" match="gml:TimePeriod">
+		<xsl:template mode="index" match="gml32:TimePeriod">
 			<xsl:variable name="times">
 				<xsl:call-template name="newGmlTime">
-					<xsl:with-param name="begin" select="gml:beginPosition|gml:begin/gml:TimeInstant/gml:timePosition"/>
-					<xsl:with-param name="end" select="gml:endPosition|gml:end/gml:TimeInstant/gml:timePosition"/>
+					<xsl:with-param name="begin" select="gml32:beginPosition|gml32:begin/gml32:TimeInstant/gml32:timePosition"/>
+					<xsl:with-param name="end" select="gml32:endPosition|gml32:end/gml32:TimeInstant/gml32:timePosition"/>
 				</xsl:call-template>
 			</xsl:variable>
 
