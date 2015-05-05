@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	
+ * Hide in edit mode : If some codelist needs to be hidden
+ in edit mode, the hideInEditMode attribute could be added
+ to any entries.
+ 
+ eg.
+	<entry hideInEditMode="true">
+	
+ This will restrict the number of available entries for end
+ user editors and keep all records ISO compatible when using
+ codelist (eg. harvested records could use codelist hidden
+ in local node and needs to be displayed in view mode).
+ 
+ By default, this attribute is not used.
+ 
+ * editorMode attribute allows to configure the editor form field.
+ 
+ * - not set -: simple combo box
+ * radio : radio button in one line
+ * radio_linebreak : radio button with line break
+ * radio_withdesc : radion button with line break and codelist entry description
+ * select : select box with size set to the number of items if lower than 7 entries.
+ 
+-->
+<codelists xmlns:gmi="http://www.isotc211.org/2005/gmi">
+	<codelist name="gmi:MI_BandDefinition">
+		<entry>
+			<code>3dB</code>
+			<label>3dB</label>
+			<description>width of a distribution equal to the distance between the outer two points on the distribution having power level half of that at the peak</description>
+		</entry>
+		<entry>
+			<code>halfMaximum</code>
+			<label>halfMaximum</label>
+			<description>width of a distribution equal to the distance between the outer two points on the distribution having power level half of that at the peak</description>
+		</entry>
+		<entry>
+			<code>fiftyPercent</code>
+			<label>fiftyPercent</label>
+			<description>full spectral width of a spectral power density measured at 50% of its peak height</description>
+		</entry>
+		<entry>
+			<code>oneOverE</code>
+			<label>oneOverE</label>
+			<description>width of a distribution equal to the distance between the outer two points on the distribution having power level 1/e that of the peak</description>
+		</entry>
+		<entry>
+			<code>equivalentWidth</code>
+			<label>equivalentWidth</label>
+			<description>width of a band with full sensitivity or absorption at every wavelength that detects or absorbs the same amount of energy as the band described</description>
+		</entry>
+	</codelist>
+	<codelist name="gmi:MI_ContextCode">
+		<entry>
+			<code>acquisition</code>
+			<label>acquisition</label>
+			<description>event related to a specific collection</description>
+		</entry>
+		<entry>
+			<code>pass</code>
+			<label>pass</label>
+			<description>event related to a sequence of collections</description>
+		</entry>
+		<entry>
+			<code>wayPoint</code>
+			<label>wayPoint</label>
+			<description>event related to a navigational manoeuvre</description>
+		</entry>
+	</codelist>
+	<codelist name="gmi:MI_GeometryTypeCode">
+		<entry>
+			<code>point</code>
+			<label>point</label>
+			<description>single geographic point of interest</description>
+		</entry>
+		<entry>
+			<code>linear</code>
+			<label>linear</label>
+			<description>extended collection in a single vector</description>
+		</entry>
+		<entry>
+			<code>areal</code>
+			<label>areal</label>
+			<description>collection of a geographic area defined by a polygon (coverage)</description>
+		</entry>
+		<entry>
+			<code>strip</code>
+			<label>strip</label>
+			<description>series of linear collections grouped by way points</description>
+		</entry>
+	</codelist>
+	<codelist name="gmi:MI_ObjectiveTypeCode">
+		<entry>
+			<code>instantaneousCollection</code>
+			<label>instantaneousCollection</label>
+			<description>single instance of collection</description>
+		</entry>
+		<entry>
+			<code>persistentView</code>
+			<label>persistentView</label>
+			<description>multiple instances of collection</description>
+		</entry>
+		<entry>
+			<code>survey</code>
+			<label>survey</label>
+			<description>collection over specified domain</description>
+		</entry>
+	</codelist>
+	<codelist name="gmi:MI_OperationTypeCode">
+		<entry>
+			<code>real</code>
+			<label>real</label>
+			<description>originates from live-fly or other non-simulated operational source</description>
+		</entry>
+		<entry>
+			<code>simulated</code>
+			<label>simulated</label>
+			<description>originates from target simulator sources</description>
+		</entry>
+		<entry>
+			<code>synthesized</code>
+			<label>synthesized</label>
+			<description>mix of real and simulated data</description>
+		</entry>
+	</codelist>
+	<codelist name="gmi:MI_PolarizationOrientationCode">
+		<entry>
+			<code>horizontal</code>
+			<label>horizontal</label>
+			<description>polarisation of the sensor oriented in the horizontal plane in relation to swath direction</description>
+		</entry>
+		<entry>
+			<code>vertical</code>
+			<label>vertical</label>
+			<description>polarisation of the sensor oriented in the vertical plane in relation to swath direction</description>
+		</entry>
+		<entry>
+			<code>leftCircular</code>
+			<label>leftCircular</label>
+			<description>polarisation of the sensor oriented in the left circular plane in relation to swath direction</description>
+		</entry>
+		<entry>
+			<code>rightCircular</code>
+			<label>rightCircular</label>
+			<description>polarisation of the sensor oriented in the right circular plane in relation to swath direction</description>
+		</entry>
+		<entry>
+			<code>theta</code>
+			<label>theta</label>
+			<description>polarisation of the sensor oriented in the angle between +90 ° and 0 ° parallel to swath direction</description>
+		</entry>
+		<entry>
+			<code>phi</code>
+			<label>phi</label>
+			<description>polarisation of the sensor oriented in the +90 ° and 0 ° perpendicular to swath direction</description>
+		</entry>
+	</codelist>
+	<codelist name="gmi:MI_PriorityCode">
+		<entry>
+			<code>critical</code>
+			<label>critical</label>
+			<description>decisive importance</description>
+		</entry>
+		<entry>
+			<code>highImportance</code>
+			<label>highImportance</label>
+			<description>requires resources to be made available</description>
+		</entry>
+		<entry>
+			<code>mediumImportance</code>
+			<label>mediumImportance</label>
+			<description>normal operation priority</description>
+		</entry>
+		<entry>
+			<code>lowImportance</code>
+			<label>lowImportance</label>
+			<description>to be completed when resources are available</description>
+		</entry>
+	</codelist>
+	<codelist name="gmi:MI_SequenceCode">
+		<entry>
+			<code>start</code>
+			<label>start</label>
+			<description>beginning of a collection</description>
+		</entry>
+		<entry>
+			<code>end</code>
+			<label>end</label>
+			<description>end of a collection</description>
+		</entry>
+		<entry>
+			<code>instantaneous</code>
+			<label>instantaneous</label>
+			<description>collection without a significant duration</description>
+		</entry>
+	</codelist>
+	<codelist name="gmi:MI_TransferFunctionTypeCode">
+		<entry>
+			<code>linear</code>
+			<label>linear</label>
+			<description>function used for transformation is first order polynomial</description>
+		</entry>
+		<entry>
+			<code>logarithmic</code>
+			<label>logarithmic</label>
+			<description>function used for transformation is logarithmic</description>
+		</entry>
+		<entry>
+			<code>exponential</code>
+			<label>exponential</label>
+			<description>function used for transformation is exponential</description>
+		</entry>
+	</codelist>
+	<codelist name="gmi:MI_TriggerCode">
+		<entry>
+			<code>automatic</code>
+			<label>automatic</label>
+			<description>event due to external stimuli</description>
+		</entry>
+		<entry>
+			<code>manual</code>
+			<label>manual</label>
+			<description>event manually instigated</description>
+		</entry>
+		<entry>
+			<code>preProgrammed</code>
+			<label>preProgrammed</label>
+			<description>event instigated by planned internal stimuli</description>
+		</entry>
+	</codelist>
+</codelists>
