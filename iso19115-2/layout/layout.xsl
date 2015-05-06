@@ -111,13 +111,13 @@
 
 		<!-- check iso19139.mcp first, then fall back to iso19139 -->
 		<xsl:variable name="listOfValues" as="node()">
-			<xsl:variable name="19115-2List" as="node()" select="gn-fn-metadata:getCodeListValues($schema, name(*[@codeListValue]), $codelists, .)"/>
+			<xsl:variable name="iso19115-2List" as="node()" select="gn-fn-metadata:getCodeListValues($schema, name(*[@codeListValue]), $codelists, .)"/>
 			<xsl:choose>
-				<xsl:when test="count($19115-2List/*)=0"> <!-- do iso19139 -->
+				<xsl:when test="count($iso19115-2List/*)=0"> <!-- do iso19139 -->
 					<xsl:copy-of select="gn-fn-metadata:getCodeListValues('iso19139', name(*[@codeListValue]), $iso19139codelists, .)"/>
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:copy-of select="$19115-2List"/>
+					<xsl:copy-of select="$iso19115-2List"/>
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
@@ -159,13 +159,13 @@
 
 		<!-- check iso19115-2 first, then fall back to iso19139 -->
 		<xsl:variable name="listOfValues" as="node()">
-			<xsl:variable name="19115-2List" as="node()" select="gn-fn-metadata:getCodeListValues($schema, name(), $codelists, .)"/>
+			<xsl:variable name="iso19115-2List" as="node()" select="gn-fn-metadata:getCodeListValues($schema, name(), $codelists, .)"/>
 			<xsl:choose>
-				<xsl:when test="count($19115-2List/*)=0"> <!-- do iso19139 -->
+				<xsl:when test="count($iso19115-2List/*)=0"> <!-- do iso19139 -->
 					<xsl:copy-of select="gn-fn-metadata:getCodeListValues('iso19139', name(), $iso19139codelists, .)"/>
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:copy-of select="$19115-2List"/>
+					<xsl:copy-of select="$iso19115-2List"/>
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
