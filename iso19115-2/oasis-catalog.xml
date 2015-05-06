@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+
+<!-- OASIS CATALOG FOR GEONETWORK TO REMAP VARIOUS XML IDs -->
+
+<!-- This used to be done in Java code, but with the use of these 
+	   maps you can customise this to suit yourself. 
+
+		 NOTE: all oasis catalog files are added to the XML resolver so
+		       you must not have duplicate entries - you cannot override 
+					 entries in other oasis catalogs 
+-->
+
+<!-- =============== ISO19139 MCP 1.5-experimental maps -->
+
+	<!-- These are to map schemaLocation hints to local schemas to make sure that
+			 GeoNetwork edits and validates against a schema it knows about -->
+
+	<system systemId="http://www.opengis.net/gml/3.2/gml.xsd" 
+	        uri="schema/gml/gml.xsd"/>
+
+	<system systemId="http://www.isotc211.org/2005/gmi/gmi.xsd" 
+	        uri="schema/gmi/gmi.xsd"/>
+
+</catalog>
