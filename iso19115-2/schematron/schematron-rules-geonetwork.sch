@@ -16,7 +16,7 @@
     <sch:pattern>
         <sch:title>$loc/strings/M500</sch:title>
         <sch:rule
-            context="//*[@gco:isoType='gmi:MI_Metadata']||gmi:MI_Metadata">
+            context="//*[@gco:isoType='gmi:MI_Metadata']|gmi:MI_Metadata">
         	<sch:let name="language" value="gmd:language/gco:CharacterString|gmd:language/gmd:LanguageCode/@codeListValue"/>
             <sch:let name="localeAndNoLanguage" value="not(gmd:locale and gmd:language/@gco:nilReason='missing')
                 and not(gmd:locale and not(gmd:language))"/>
