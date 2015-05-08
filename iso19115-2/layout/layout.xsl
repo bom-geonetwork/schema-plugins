@@ -10,7 +10,7 @@
   xmlns:gn-fn-iso19139="http://geonetwork-opensource.org/xsl/functions/profiles/iso19139"
   xmlns:exslt="http://exslt.org/common" exclude-result-prefixes="#all">
 
-  <xsl:include href="utility-fn.xsl"/>
+	<xsl:import href="../../iso19139/layout/layout.xsl"/>
   <xsl:include href="utility-tpl.xsl"/>
   <xsl:include href="layout-custom-fields.xsl"/>
 
@@ -20,9 +20,16 @@
 	<xsl:variable name="iso19115-2strings" select="$iso19115-2schema/strings"/>
 
   <!-- Visit all XML tree recursively -->
-  <xsl:template mode="mode-iso19139" match="gmi:*|gmd:*|gmx:*|gml32:*|srv:*|gts:*">
+  <xsl:template mode="mode-iso19139" match="gmi:*|gml32:*">
     <xsl:param name="schema" select="$schema" required="no"/>
     <xsl:param name="labels" select="$labels" required="no"/>
+
+		<!--
+		<xsl:message>VISITING; <xsl:value-of select="concat(name(),':::::',namespace-uri())"/></xsl:message>
+		<xsl:for-each select="*">
+			<xsl:message>CHILD; <xsl:value-of select="concat(name(),':::::',namespace-uri())"/></xsl:message>
+		</xsl:for-each>
+		-->
 
     <xsl:apply-templates mode="mode-iso19139" select="*|@*">
       <xsl:with-param name="schema" select="$schema"/>
@@ -181,6 +188,23 @@
       <xsl:with-param name="listOfValues"
         select="gn-fn-metadata:getCodeListValues($schema, name(), $codelists, .)"/>
     </xsl:call-template>
+  </xsl:template>
+
+  <xsl:template mode="mode-iso19139"
+                priority="20000"
+                match="*[gco:Date|gco:DateTime]">
+    <xsl:param name="schema" select="$schema" required="no"/>
+    <xsl:param name="labels" select="$labels" required="no"/>
+
+    <xsl:variable name="labelConfig"
+                  select="gn-fn-metadata:getLabel($schema, name(), $labels)"/>
+
+    <div data-gn-date-picker="{gco:Date|gco:DateTime}"
+         data-label="{$labelConfig/label}"
+         data-element-name="{name(gco:Date|gco:DateTime)}"
+         data-element-ref="{concat('_X', gn:element/@ref)}"
+				 data-namespaces='{{ "gco": "http://www.isotc211.org/2005/gco", "gml": "http://www.opengis.net/gml/3.2"}}'>
+    </div>
   </xsl:template>
 
 

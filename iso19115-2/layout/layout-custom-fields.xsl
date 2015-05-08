@@ -49,7 +49,7 @@
   <!-- ===================================================================== -->
 
   <xsl:template mode="mode-iso19139" match="gml32:beginPosition|gml32:endPosition|gml32:timePosition"
-    priority="200">
+    priority="2000">
 
 
     <xsl:variable name="xpath" select="gn-fn-metadata:getXPath(.)"/>

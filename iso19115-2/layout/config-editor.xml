@@ -7,7 +7,7 @@
   xmlns:gmi="http://www.isotc211.org/2005/gmi"
   xmlns:gmx="http://www.isotc211.org/2005/gmx"
   xmlns:srv="http://www.isotc211.org/2005/srv"
-  xmlns:gml="http://www.opengis.net/gml"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
   xmlns:xlink="http://www.w3.org/1999/xlink">
 
   <!-- Form field type configuration. Default is text. -->
@@ -37,7 +37,8 @@
     <for name="gco:Real" use="number"/>
     <for name="gco:Boolean" use="checkbox"/>
 
-
+		<!-- NOTE: for directiveAttributes on gco:Date/gco:DateTime 
+		           refer to iso19115-2/layout/layout.xsl -->
     <for name="gco:Date" use="data-gn-date-picker"/>
     <for name="gco:DateTime" use="data-gn-date-picker"/>
 
