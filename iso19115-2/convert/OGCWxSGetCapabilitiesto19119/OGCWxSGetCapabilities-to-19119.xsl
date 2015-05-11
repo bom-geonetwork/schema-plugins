@@ -15,7 +15,7 @@ Mapping between :
 										xmlns:gco="http://www.isotc211.org/2005/gco"
 										xmlns:gts="http://www.isotc211.org/2005/gts"
 										xmlns:gmi="http://www.isotc211.org/2005/gmi"
-										xmlns:gml="http://www.opengis.net/gml"
+										xmlns:gml="http://www.opengis.net/gml/3.2"
 										xmlns:srv="http://www.isotc211.org/2005/srv"
 										xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 										xmlns:xsl="http://www.w3.org/1999/XSL/Transform"

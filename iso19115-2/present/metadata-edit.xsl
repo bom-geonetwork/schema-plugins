@@ -5,12 +5,11 @@
 	xmlns:gco="http://www.isotc211.org/2005/gco"
 	xmlns:gmx="http://www.isotc211.org/2005/gmx"
 	xmlns:srv="http://www.isotc211.org/2005/srv"
-	xmlns:gml32="http://www.opengis.net/gml/3.2"
-	xmlns:gml="http://www.opengis.net/gml"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns:exslt="http://exslt.org/common"
 	xmlns:geonet="http://www.fao.org/geonetwork"
-	exclude-result-prefixes="gmx gmd gco gml32 srv xlink exslt geonet">
+	exclude-result-prefixes="gmx gmd gco gml srv xlink exslt geonet">
 
 	<xsl:import href="metadata-view.xsl"/>
 

@@ -35,11 +35,11 @@
 				</xsl:attribute>
 			</xsl:if>
 
-			<xsl:apply-templates select="gml32:featureMembers"/>
+			<xsl:apply-templates select="gml:featureMembers"/>
 		</records>
 	</xsl:template>
 
-	<xsl:template match="gml32:featureMembers">
+	<xsl:template match="gml:featureMembers">
 		<xsl:apply-templates select="gn:gboundaries"/>
 	</xsl:template>
 
@@ -47,7 +47,7 @@
 		<record>
 
 			<!-- boundingPolygon 
-			<fragment id="geoservertest.boundingpolygon" uuid="{@gml32:id}_boundingpolygon" title="{concat(gn:ADM0NAME,':',gn:ADM0_CODE,':boundingpoly')}">
+			<fragment id="geoservertest.boundingpolygon" uuid="{@gml:id}_boundingpolygon" title="{concat(gn:ADM0NAME,':',gn:ADM0_CODE,':boundingpoly')}">
 				<gmd:EX_BoundingPolygon>
 					<gmd:polygon>
 						<xsl:copy-of select="gn:the_geom/*"/>
@@ -56,7 +56,7 @@
 				</fragment>-->
 
 		  <!-- extent -->
-		  <fragment id="geoservertest.boundingpolygon" uuid="{@gml32:id}_boundingpolygon" title="{concat(gn:ADM0NAME,':',gn:ADM0_CODE,':boundingpoly')}">
+		  <fragment id="geoservertest.boundingpolygon" uuid="{@gml:id}_boundingpolygon" title="{concat(gn:ADM0NAME,':',gn:ADM0_CODE,':boundingpoly')}">
 		    <gmd:EX_Extent>
 		      <gmd:description>
 		        <gco:CharacterString><xsl:value-of select="gn:ADM0NAME"/></gco:CharacterString>
@@ -72,7 +72,7 @@
 		  </fragment>
 
 			<!-- pointOfContact 
-			<fragment id="geoservertest.contactinfo" uuid="{@gml32:id}_contactinfo" title="{concat(gn:ADM0NAME,':',gn:ADM0_CODE,':contactinfo')}">
+			<fragment id="geoservertest.contactinfo" uuid="{@gml:id}_contactinfo" title="{concat(gn:ADM0NAME,':',gn:ADM0_CODE,':contactinfo')}">
 				<gmd:CI_ResponsibleParty>
    				<gmd:individualName>
      				<gco:CharacterString>Dr Charlie Brown</gco:CharacterString>
@@ -91,7 +91,7 @@
 			-->
 		  
 			<!-- keywords -->
-			<fragment id="geoservertest.keywords" uuid="{@gml32:id}_keywords" title="{concat(gn:ADM0NAME,':',gn:ADM0_CODE,':keywords')}">
+			<fragment id="geoservertest.keywords" uuid="{@gml:id}_keywords" title="{concat(gn:ADM0NAME,':',gn:ADM0_CODE,':keywords')}">
 				<gmd:MD_Keywords>
 					<gmd:keyword>
 						<gco:CharacterString><xsl:value-of select="gn:CONTINENT_"/></gco:CharacterString>
@@ -109,7 +109,7 @@
 			</fragment>
 
 			<!-- citation 
-			<fragment id="geoservertest.citation" uuid="{@gml32:id}_citation" title="{concat(gn:ADM0NAME,':',gn:ADM0_CODE,':citation')}">
+			<fragment id="geoservertest.citation" uuid="{@gml:id}_citation" title="{concat(gn:ADM0NAME,':',gn:ADM0_CODE,':citation')}">
 				<gmd:CI_Citation>
 					<gmd:title>
 						<gco:CharacterString>Information about the geographic boundary for <xsl:value-of select="gn:ADM0NAME"/></gco:CharacterString>
@@ -133,7 +133,7 @@
 		  
 			<!-- abstract 
 
-			<fragment id="geoservertest.abstract" uuid="{@gml32:id}_abstract" title="{concat(gn:ADM0NAME,':',gn:ADM0_CODE,':abstract')}">
+			<fragment id="geoservertest.abstract" uuid="{@gml:id}_abstract" title="{concat(gn:ADM0NAME,':',gn:ADM0_CODE,':abstract')}">
 				<gmd:abstract>
 					<gco:CharacterString>
 						Metadata about the geographic boundary for <xsl:value-of select="gn:ADM0NAME"/>
@@ -147,10 +147,10 @@
 			-->
 			<!-- temporal extent = validity -->
 
-			<fragment id="geoservertest.tempextent" uuid="{@gml32:id}_tempextent" title="{concat(gn:ADM0NAME,':',gn:ADM0_CODE,':tempextent')}">
+			<fragment id="geoservertest.tempextent" uuid="{@gml:id}_tempextent" title="{concat(gn:ADM0NAME,':',gn:ADM0_CODE,':tempextent')}">
 				<gmd:EX_TemporalExtent>
 					<gmd:extent>
-						<gml32:TimePeriod gml32:id="{@gml32:id}_timeperiod">
+						<gml32:TimePeriod gml32:id="{@gml:id}_timeperiod">
 							<gml32:beginPosition indeterminatePosition="unknown">unknown</gml32:beginPosition>
 							<gml32:endPosition><xsl:value-of select="gn:LAST_UPD"/></gml32:endPosition>
 						</gml32:TimePeriod>
