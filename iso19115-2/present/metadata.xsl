@@ -11,8 +11,6 @@
 	xmlns:geonet="http://www.fao.org/geonetwork"
 	exclude-result-prefixes="gmx gmd gco gml srv xlink exslt geonet">
 
-	<xsl:import href="metadata-view.xsl"/>
-
 	<!-- main template - the way into processing iso19115-2 -->
   <xsl:template match="metadata-iso19115-2" name="metadata-iso19115-2">
     <xsl:param name="schema"/>
