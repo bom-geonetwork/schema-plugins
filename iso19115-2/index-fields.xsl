@@ -34,11 +34,11 @@
         <Field name="_title" string="{string($_defaultTitle)}" store="true" index="true"/>
 
         <xsl:apply-templates
-                select="*[name(.)='gmi:MI_Metadata' or @gco:isoType='gmi:MI_Metadata']"
+                select="*[name(.)='gmi:MI_Metadata' or @gco:isoType='gmi:MI_Metadata' or name(.)='gmd:MD_Metadata' or @gco:isoType='gmd:MD_Metadata']"
                 mode="metadata"/>
 
         <xsl:apply-templates mode="index"
-                select="*[name(.)='gmi:MI_Metadata' or @gco:isoType='gmi:MI_Metadata']"/>
+                select="*[name(.)='gmi:MI_Metadata' or @gco:isoType='gmi:MI_Metadata' or name(.)='gmd:MD_Metadata' or @gco:isoType='gmd:MD_Metadata']"/>
 
       </Document>
     </xsl:template>

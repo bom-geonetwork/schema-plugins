@@ -26,7 +26,7 @@
     <gco:DateTime/>
   </gmd:dateStamp>
   <gmd:metadataStandardName>
-    <gco:CharacterString>ISO 19115-2:2008/ISO19139</gco:CharacterString>
+    <gco:CharacterString>ISO 19115-2:2009/ISO19139</gco:CharacterString>
   </gmd:metadataStandardName>
   <gmd:metadataStandardVersion>
     <gco:CharacterString>1.0</gco:CharacterString>
@@ -36,7 +36,7 @@
       <gmd:citation>
         <gmd:CI_Citation>
           <gmd:title>
-            <gco:CharacterString>ISO19115-2:2008: MINIMUM Metadata for geographic datasets</gco:CharacterString>
+            <gco:CharacterString>ISO19115-2:2009: MINIMUM Metadata for geographic datasets</gco:CharacterString>
           </gmd:title>
           <gmd:date>
             <gmd:CI_Date>

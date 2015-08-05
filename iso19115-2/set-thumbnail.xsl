@@ -6,12 +6,12 @@
     <!-- ================================================================= -->
 
     <xsl:template match="/root">
-        <xsl:apply-templates select="gmi:MI_Metadata|*[contains(@gco:isoType, 'MI_Metadata')]"/>
+        <xsl:apply-templates select="gmi:MI_Metadata|*[contains(@gco:isoType, 'MI_Metadata')|gmd:MD_Metadata|*[contains(@gco:isoType, 'MD_Metadata')]"/>
     </xsl:template>
 
     <!-- ================================================================= -->
 
-    <xsl:template match="gmi:MI_Metadata|*[contains(@gco:isoType, 'MI_Metadata')]">
+    <xsl:template match="gmi:MI_Metadata|*[contains(@gco:isoType, 'MI_Metadata')]|gmd:MD_Metadata|*[contains(@gco:isoType, 'MD_Metadata')]">
         <xsl:copy>
             <xsl:copy-of select="@*"/>
             <xsl:apply-templates select="gmd:fileIdentifier"/>

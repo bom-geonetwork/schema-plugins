@@ -7,7 +7,7 @@
         <xsl:apply-templates select="*[name() != 'env']"/>
     </xsl:template>
 
-    <xsl:template match="gmi:MI_Metadata">
+    <xsl:template match="gmi:MI_Metadata|gmd:MD_Metadata">
         <xsl:copy>
             <xsl:copy-of select="@*"/>
             <gmd:fileIdentifier>

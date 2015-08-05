@@ -6,7 +6,7 @@
     <!-- ================================================================= -->
 
     <xsl:template match="/root">
-        <xsl:apply-templates select="gmi:MI_Metadata|*[contains(@gco:isoType, 'MI_Metadata')]"/>
+        <xsl:apply-templates select="gmi:MI_Metadata|*[contains(@gco:isoType, 'MI_Metadata')]|gmd:MD_Metadata|*[contains(@gco:isoType, 'MD_Metadata')]"/>
     </xsl:template>
 
     <!-- ================================================================= -->

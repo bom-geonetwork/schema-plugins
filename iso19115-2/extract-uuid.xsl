@@ -3,7 +3,7 @@
     xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd"
     xmlns:gmi="http://www.isotc211.org/2005/gmi">
 
-    <xsl:template match="gmi:MI_Metadata">
+    <xsl:template match="gmi:MI_Metadata|gmd:MD_Metadata">
         <uuid>
             <xsl:value-of select="gmd:fileIdentifier/gco:CharacterString"/>
         </uuid>

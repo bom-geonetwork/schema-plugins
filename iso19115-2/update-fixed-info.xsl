@@ -7,10 +7,10 @@
 
     <!-- Take priority over iso19139 -->
     <xsl:template match="/root" priority="2">
-        <xsl:apply-templates select="gmi:MI_Metadata"/>
+        <xsl:apply-templates select="gmi:MI_Metadata|gmd:MD_Metadata"/>
     </xsl:template>
 
-    <xsl:template match="gmi:MI_Metadata" priority="2">
+    <xsl:template match="gmi:MI_Metadata|gmd:MD_Metadata" priority="2">
         <xsl:copy>
             <xsl:apply-templates select="@*"/>
 
@@ -43,14 +43,14 @@
 		<!-- ================================================================= -->
 		<!-- Do not process any elements produced by previous template  -->
 
-		<xsl:template match="gmi:MI_Metadata/gmd:fileIdentifier|gmi:MI_Metadata/gmd:parentIdentifier" priority="10"/>
+		<xsl:template match="gmi:MI_Metadata/gmd:fileIdentifier|gmi:MI_Metadata/gmd:parentIdentifier|gmd:MD_Metadata/gmd:fileIdentifier|gmd:MD_Metadata/gmd:parentIdentifier" priority="10"/>
 
 		<!-- ================================================================= -->
 
 		<!-- Only set metadataStandardName and metadataStandardVersion if not set. -->
 		<xsl:template match="gmd:metadataStandardName[@gco:nilReason='missing' or gco:CharacterString='']" priority="20">
 			<xsl:copy>
-				<gco:CharacterString>ISO 19115-2:2008/19139</gco:CharacterString>
+				<gco:CharacterString>ISO 19115-2:2009/19139</gco:CharacterString>
 			</xsl:copy>
 		</xsl:template>
 
