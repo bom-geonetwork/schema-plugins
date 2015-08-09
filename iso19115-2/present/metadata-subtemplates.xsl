@@ -17,7 +17,7 @@
 				<title><xsl:value-of select="geonet:info/title"/></title>
 			</xsl:when>
 			<xsl:when test="count($19115-2Elements/*)>0">
-				<xsl:copy-of select="$19115-2mcpElements"/>
+				<xsl:copy-of select="$19115-2Elements"/>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:apply-templates mode="iso19139-subtemplate" select="."/>
