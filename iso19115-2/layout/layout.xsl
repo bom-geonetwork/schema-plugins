@@ -95,6 +95,22 @@
 
   </xsl:template>
 
+	<!-- Template to retrieve codelist values falling back through iso19115-2 and iso19139 to find
+	     codelists that may belong to those schemas -->
+
+	<xsl:template name="iso19115-2getCodelistValues">
+		<xsl:param name="schema" select="$schema"/>
+		<xsl:variable name="iso19115-2List" as="node()" select="gn-fn-metadata:getCodeListValues($schema, name(*[@codeListValue]), $iso19115-2codelists, .)"/>
+		<xsl:choose>
+			<xsl:when test="count($iso19115-2List/*)=0"> <!-- do iso19139 -->
+				<xsl:copy-of select="gn-fn-metadata:getCodeListValues('iso19139', name(*[@codeListValue]), $iso19139codelists, .)"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:copy-of select="$iso19115-2List"/>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+
   <!-- Match codelist values. Must use iso19115-2 because some 
 	     19139 codelists are extended in 19115-2 - if the codelist exists in
 			 iso19115-2 then use that otherwise use iso19139 codelists
@@ -110,23 +126,16 @@
   <xsl:template mode="mode-iso19139" priority="200" match="*[*/@codeList and $schema='iso19115-2']">
     <xsl:param name="schema" select="$schema" required="no"/>
     <xsl:param name="labels" select="$labels" required="no"/>
-    <xsl:param name="codelists" select="$iso19139codelists" required="no"/>
 
     <xsl:variable name="xpath" select="gn-fn-metadata:getXPath(.)"/>
     <xsl:variable name="isoType" select="if (../@gco:isoType) then ../@gco:isoType else ''"/>
     <xsl:variable name="elementName" select="name()"/>
 
-		<!-- check iso19139.mcp first, then fall back to iso19139 -->
+		<!-- check iso19115-2 first, then fall back to iso19139 -->
 		<xsl:variable name="listOfValues" as="node()">
-			<xsl:variable name="iso19115-2List" as="node()" select="gn-fn-metadata:getCodeListValues($schema, name(*[@codeListValue]), $codelists, .)"/>
-			<xsl:choose>
-				<xsl:when test="count($iso19115-2List/*)=0"> <!-- do iso19139 -->
-					<xsl:copy-of select="gn-fn-metadata:getCodeListValues('iso19139', name(*[@codeListValue]), $iso19139codelists, .)"/>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:copy-of select="$iso19115-2List"/>
-				</xsl:otherwise>
-			</xsl:choose>
+			<xsl:call-template name="iso19115-2getCodelistValues">
+    		<xsl:with-param name="schema" select="$schema"/>
+			</xsl:call-template>
 		</xsl:variable>
 
     <xsl:call-template name="render-element">
@@ -140,8 +149,7 @@
         select="if ($isEditing) then concat(*/gn:element/@ref, '_codeListValue') else ''"/>
       <xsl:with-param name="editInfo" select="*/gn:element"/>
       <xsl:with-param name="parentEditInfo" select="gn:element"/>
-      <xsl:with-param name="listOfValues"
-        select="gn-fn-metadata:getCodeListValues($schema, name(*[@codeListValue]), $codelists, .)"/>
+      <xsl:with-param name="listOfValues" select="$listOfValues"/>
       <xsl:with-param name="isFirst" select="count(preceding-sibling::*[name() = $elementName]) = 0"/>
     </xsl:call-template>
 
@@ -159,22 +167,15 @@
       <geonet:text value="biota"/>
       <geonet:text value="boundaries"/
   -->
-  <xsl:template mode="mode-iso19139" match="*[gn:element/gn:text]">
+  <xsl:template mode="mode-iso19139" match="*[gn:element/gn:text and $schema='iso19115-2']">
     <xsl:param name="schema" select="$schema" required="no"/>
     <xsl:param name="labels" select="$labels" required="no"/>
-    <xsl:param name="codelists" select="$iso19139codelists" required="no"/>
 
 		<!-- check iso19115-2 first, then fall back to iso19139 -->
 		<xsl:variable name="listOfValues" as="node()">
-			<xsl:variable name="iso19115-2List" as="node()" select="gn-fn-metadata:getCodeListValues($schema, name(), $codelists, .)"/>
-			<xsl:choose>
-				<xsl:when test="count($iso19115-2List/*)=0"> <!-- do iso19139 -->
-					<xsl:copy-of select="gn-fn-metadata:getCodeListValues('iso19139', name(), $iso19139codelists, .)"/>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:copy-of select="$iso19115-2List"/>
-				</xsl:otherwise>
-			</xsl:choose>
+			<xsl:call-template name="iso19115-2getCodelistValues">
+    		<xsl:with-param name="schema" select="$schema"/>
+			</xsl:call-template>
 		</xsl:variable>
 
     <xsl:call-template name="render-element">
@@ -185,8 +186,7 @@
       <xsl:with-param name="type" select="gn-fn-iso19139:getCodeListType(name())"/>
       <xsl:with-param name="name" select="gn:element/@ref"/>
       <xsl:with-param name="editInfo" select="*/gn:element"/>
-      <xsl:with-param name="listOfValues"
-        select="gn-fn-metadata:getCodeListValues($schema, name(), $codelists, .)"/>
+      <xsl:with-param name="listOfValues" select="$listOfValues"/>
     </xsl:call-template>
   </xsl:template>
 

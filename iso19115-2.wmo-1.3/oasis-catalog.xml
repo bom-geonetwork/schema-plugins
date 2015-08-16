@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+
+<!-- OASIS CATALOG FOR GEONETWORK TO REMAP VARIOUS XML IDs -->
+
+<!-- This used to be done in Java code, but with the use of these 
+	   maps you can customise this to suit yourself. 
+
+		 NOTE: all oasis catalog files are added to the XML resolver so
+		       you must not have duplicate entries - you cannot override 
+					 entries in other oasis catalogs 
+-->
+
+	<uri name="http://www.opengis.net/gml/3.2/gml.xsd"
+	       uri="schema/gml/gml.xsd"/>
+
+	<uri name="http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gmi/gmi.xsd" 
+	        uri="schema/gmi/gmi.xsd"/>
+
+	<uri name="http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gmd/gmd.xsd"
+	       uri="schema/gmd/gmd.xsd"/>
+
+	<uri name="http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gmx/gmx.xsd"
+	       uri="schema/gmx/gmx.xsd"/>
+
+	<uri name="http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gco/gco.xsd"
+	       uri="schema/gco/gco.xsd"/>
+
+	<uri name="http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gss/gss.xsd"
+	       uri="schema/gss/gss.xsd"/>
+
+	<uri name="http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gfc/gfc.xsd"
+	       uri="schema/gfc/gfc.xsd"/>
+
+	<uri name="http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gsr/gsr.xsd"
+	       uri="schema/gsr/gsr.xsd"/>
+
+	<uri name="http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gts/gts.xsd"
+	       uri="schema/gts/gts.xsd"/>
+
+	<uri name="http://standards.iso.org/iso/19115/-2/gmi/1.0/gmi.xsd" 
+	        uri="schema/gmi/gmi.xsd"/>
+
+	<uri name="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gmd/gmd.xsd"
+	       uri="schema/gmd/gmd.xsd"/>
+
+	<uri name="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gmx/gmx.xsd"
+	       uri="schema/gmx/gmx.xsd"/>
+
+	<uri name="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"
+	       uri="schema/gco/gco.xsd"/>
+
+	<uri name="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gss/gss.xsd"
+	       uri="schema/gss/gss.xsd"/>
+
+	<uri name="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gfc/gfc.xsd"
+	       uri="schema/gfc/gfc.xsd"/>
+
+	<uri name="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gsr/gsr.xsd"
+	       uri="schema/gsr/gsr.xsd"/>
+
+	<uri name="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gts/gts.xsd"
+	       uri="schema/gts/gts.xsd"/>
+
+	<!-- These are to map schemaLocation hints to local schemas to make sure that
+			 GeoNetwork edits and validates against a schema it knows about -->
+
+	<system systemId="http://www.opengis.net/gml/3.2/gml.xsd" 
+	        uri="schema/gml/gml.xsd"/>
+
+	<system systemId="http://standards.iso.org/iso/19115/-2/gmi/1.0/gmi.xsd" 
+	        uri="schema/gmi/gmi.xsd"/>
+
+	<system systemId="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gmd/gmd.xsd" 
+	        uri="schema/gmd/gmd.xsd"/>
+
+	<system systemId="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gmx/gmx.xsd" 
+	        uri="schema/gmx/gmx.xsd"/>
+
+	<system systemId="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"
+	        uri="schema/gco/gco.xsd"/>
+
+	<system systemId="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gfc/gfc.xsd"
+	        uri="schema/gfc/gfc.xsd"/>
+
+	<system systemId="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gsr/gsr.xsd"
+	        uri="schema/gsr/gsr.xsd"/>
+
+	<system systemId="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gts/gts.xsd"
+	        uri="schema/gts/gts.xsd"/>
+
+	<system systemId="http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gmi/gmi.xsd" 
+	        uri="schema/gmi/gmi.xsd"/>
+
+	<system systemId="http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gmd/gmd.xsd" 
+	        uri="schema/gmd/gmd.xsd"/>
+
+	<system systemId="http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gmx/gmx.xsd" 
+	        uri="schema/gmx/gmx.xsd"/>
+
+	<system systemId="http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gco/gco.xsd" 
+	        uri="schema/gco/gco.xsd"/>
+
+	<system systemId="http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gss/gss.xsd"
+	        uri="schema/gss/gss.xsd"/>
+
+	<system systemId="http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gfc/gfc.xsd"
+	        uri="schema/gfc/gfc.xsd"/>
+
+	<system systemId="http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gsr/gsr.xsd"
+	        uri="schema/gsr/gsr.xsd"/>
+
+	<system systemId="http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gts/gts.xsd"
+	        uri="schema/gts/gts.xsd"/>
+
+</catalog>

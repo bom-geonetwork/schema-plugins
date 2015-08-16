@@ -11,7 +11,32 @@
 					 entries in other oasis catalogs 
 -->
 
-<!-- =============== ISO19139 MCP 1.5-experimental maps -->
+	<uri name="http://www.opengis.net/gml/3.2/gml.xsd"
+	       uri="schema/gml/gml.xsd"/>
+
+	<uri name="http://standards.iso.org/iso/19115/-2/gmi/1.0/gmi.xsd" 
+	        uri="schema/gmi/gmi.xsd"/>
+
+	<uri name="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gmd/gmd.xsd"
+	       uri="schema/gmd/gmd.xsd"/>
+
+	<uri name="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gmx/gmx.xsd"
+	       uri="schema/gmx/gmx.xsd"/>
+
+	<uri name="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"
+	       uri="schema/gco/gco.xsd"/>
+
+	<uri name="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gss/gss.xsd"
+	       uri="schema/gss/gss.xsd"/>
+
+	<uri name="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gfc/gfc.xsd"
+	       uri="schema/gfc/gfc.xsd"/>
+
+	<uri name="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gsr/gsr.xsd"
+	       uri="schema/gsr/gsr.xsd"/>
+
+	<uri name="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gts/gts.xsd"
+	       uri="schema/gts/gts.xsd"/>
 
 	<!-- These are to map schemaLocation hints to local schemas to make sure that
 			 GeoNetwork edits and validates against a schema it knows about -->
@@ -19,10 +44,25 @@
 	<system systemId="http://www.opengis.net/gml/3.2/gml.xsd" 
 	        uri="schema/gml/gml.xsd"/>
 
-	<system systemId="http://standards.iso.org/19115/-2/gmi/1.0/gmi.xsd" 
+	<system systemId="http://standards.iso.org/iso/19115/-2/gmi/1.0/gmi.xsd" 
 	        uri="schema/gmi/gmi.xsd"/>
 
-	<system systemId="http://standards.iso.org/19115/-2/gmd/1.0/gmd.xsd" 
+	<system systemId="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gmd/gmd.xsd" 
 	        uri="schema/gmd/gmd.xsd"/>
+
+	<system systemId="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gmx/gmx.xsd" 
+	        uri="schema/gmx/gmx.xsd"/>
+
+	<system systemId="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"
+	        uri="schema/gco/gco.xsd"/>
+
+	<system systemId="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gfc/gfc.xsd"
+	        uri="schema/gfc/gfc.xsd"/>
+
+	<system systemId="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gsr/gsr.xsd"
+	        uri="schema/gsr/gsr.xsd"/>
+
+	<system systemId="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gts/gts.xsd"
+	        uri="schema/gts/gts.xsd"/>
 
 </catalog>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gmi:MI_Metadata xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:srv="http://www.isotc211.org/2005/srv" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:geonet="http://www.fao.org/geonetwork" xsi:schemaLocation="http://www.isotc211.org/2005/gmi http://standards.iso.org/19115/-2/gmi/1.0/gmi.xsd http://www.isotc211.org/2005/gmd http://standards.iso.org/19115/-2/gmd/1.0/gmd.xsd http://www.opengis.net/gml/3.2 http://www.opengis.net/gml/3.2/gml.xsd">
+<gmi:MI_Metadata xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:srv="http://www.isotc211.org/2005/srv" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:geonet="http://www.fao.org/geonetwork" xsi:schemaLocation="http://www.isotc211.org/2005/gmi http://standards.iso.org/iso/19115/-2/gmi/1.0/gmi.xsd http://www.opengis.net/gml/3.2 http://www.opengis.net/gml/3.2/gml.xsd">
   <gmd:fileIdentifier>
     <gco:CharacterString>2688586c-cfee-4037-877e-69ef54e2f313</gco:CharacterString>
   </gmd:fileIdentifier>
