@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    WMO Category Codes from WMO Core Metadata Profile version 1.3 Code List extensions and amendments
+    
+    ChangeLog
+    Version 1.3.0: 14 Feb 2013: Issued with final draft for approval of WMO Metadata Core Profile 1.3
+	Version 1.3.1: 11 July 2013: Corrections to typography of descriptions of code list items (following TT-ApMD-2)
+	Version 1.3.2: 22 November 2013: Corrections following review by IPET-MDRD
+	Version 1.3.3: 15 May 2014: Introduction of changes from Fast Track approval
+	Version 1.3.4: 19 May 2015: Introduction of changes from Fast Track approval
+
+	Assigned UUID 9cd91568-5868-4b5f-853b-e62f4c40ff7c
+	
+-->
+<gmx:CT_CodelistCatalogue xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gco="http://www.isotc211.org/2005/gco"
+    xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		uuid="9cd91568-5868-4b5f-853b-e62f4c40ff7c"
+    xsi:schemaLocation="http://www.isotc211.org/2005/gmd http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gmd/gmd.xsd
+                        http://www.isotc211.org/2005/gmx http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gmx/gmx.xsd">
+    <gmx:name>
+        <gco:CharacterString>WMO Category Codes</gco:CharacterString>
+    </gmx:name>
+    <gmx:scope>
+        <gco:CharacterString>WMO Category Codes from Codelists for description of metadata datasets compliant with the WMO Core Metadata Profile version 1.3 (derived from ISO/TC 211 19115:2003 and 19139)</gco:CharacterString>
+    </gmx:scope>
+    <gmx:fieldOfApplication>
+        <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+    </gmx:fieldOfApplication>
+    <gmx:versionNumber>
+        <gco:CharacterString>1.3.1</gco:CharacterString>
+    </gmx:versionNumber>
+    <gmx:versionDate>
+        <gco:Date>2013-07-11</gco:Date>
+    </gmx:versionDate>
+    <gmx:language>
+        <gmd:LanguageCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#LanguageCode" codeListValue="eng">eng</gmd:LanguageCode>
+    </gmx:language>
+    <gmx:characterSet>
+        <gmd:MD_CharacterSetCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8">utf8</gmd:MD_CharacterSetCode>
+    </gmx:characterSet>
+    <!-- WMO_CategoryCode :: New CodeList for WMO Core Metadata Profile -->
+    <gmx:codelistItem>
+        <gmx:CodeListDictionary gml:id="WMO_CategoryCode">
+            <gml:description>additional topic categories for WMO community</gml:description>
+            <gml:identifier codeSpace="WMO Core Metadata Profile">WMO_CategoryCode</gml:identifier>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_weatherObservations">
+                    <gml:description>weather observations</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">weatherObservations</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_weatherForecasts">
+                    <gml:description>weather forecasts</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">weatherForecasts</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_meteorology">
+                    <gml:description>Meteorology</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">meteorology</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_hydrology">
+                    <gml:description>Hydrology</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">hydrology</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_climatology">
+                    <gml:description>Climatology</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">climatology</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_landMeteorologyClimate">
+                    <gml:description>land meteorology climate</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">landMeteorologyClimate</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_synopticMeteorology">
+                    <gml:description>synoptic meteorology</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">synopticMeteorology</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_marineMeteorology">
+                    <gml:description>marine meteorology</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">marineMeteorology</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_agriculturalMeteorology">
+                    <gml:description>agricultural meteorology</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">agriculturalMeteorology</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_aerology">
+                    <gml:description>Aerology</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">aerology</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_marineAerology">
+                    <gml:description>marine aerology</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">marineAerology</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_oceanography">
+                    <gml:description>Oceanography</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">oceanography</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_landHydrology">
+                    <gml:description>land hydrology</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">landHydrology</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_rocketSounding">
+                    <gml:description>rocket sounding</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">rocketSounding</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_pollution">
+                    <gml:description>Pollution</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">pollution</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_waterPollution">
+                    <gml:description>water pollution</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">waterPollution</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_landWaterPollution">
+                    <gml:description>land water pollution</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">landWaterPollution</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_seaPollution">
+                    <gml:description>sea pollution</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">seaPollution</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_landPollution">
+                    <gml:description>land pollution</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">landPollution</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_airPollution">
+                    <gml:description>air pollution</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">airPollution</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_glaciology">
+                    <gml:description>Glaciology</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">glaciology</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_actinometry">
+                    <gml:description>Actinometry</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">actinometry</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_satelliteObservation">
+                    <gml:description>satellite observation</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">satelliteObservation</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_airplaneObservation">
+                    <gml:description>airplane observation</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">airplaneObservation</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_observationPlatform">
+                    <gml:description>observation platform</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">observationPlatform</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+			            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_spaceWeather">
+                    <gml:description>space weather</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">spaceWeather</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+			            <gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_atmosphericComposition">
+                    <gml:description>atmospheric composition</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">atmosphericComposition</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+			<gmx:codeEntry>
+                <gmx:CodeDefinition gml:id="WMO_CategoryCode_radiation">
+                    <gml:description>radiation</gml:description>
+                    <gml:identifier codeSpace="WMO Core Metadata Profile">radiation</gml:identifier>
+                </gmx:CodeDefinition>
+            </gmx:codeEntry>
+        </gmx:CodeListDictionary>
+    </gmx:codelistItem>
+</gmx:CT_CodelistCatalogue>

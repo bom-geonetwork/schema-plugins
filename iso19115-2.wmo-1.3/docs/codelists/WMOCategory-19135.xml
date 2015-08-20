@@ -1,0 +1,2347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grg:RE_Register xmlns:grg="http://www.isotc211.org/2005/grg"
+                 xmlns:gmd="http://www.isotc211.org/2005/gmd"
+                 xmlns:gco="http://www.isotc211.org/2005/gco"
+                 xmlns:gnreg="http://geonetwork-opensource.org/register"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 uuid="4305b0a6-d100-4dae-9203-ce951e5458b5"
+                 xsi:schemaLocation="http://www.isotc211.org/2005/grg http://www.isotc211.org/2005/grg/grg.xsd http://www.isotc211.org/2005/gmd http://www.isotc211.org/2005/gmd/gmd.xsd http://www.isotc211.org/2005/gco http://www.isotc211.org/2005/gco/gco.xsd">
+   <grg:name>
+      <gco:CharacterString>WMO Category Codes</gco:CharacterString>
+   </grg:name>
+   <grg:contentSummary>
+      <gco:CharacterString>WMO Category Codes from Codelists for description of metadata datasets compliant with the WMO Core Metadata Profile version 1.3 (derived from ISO/TC 211 19115:2003 and 19139)</gco:CharacterString>
+   </grg:contentSummary>
+   <grg:uniformResourceIdentifier>
+      <gmd:CI_OnlineResource>
+         <gmd:linkage>
+            <gmd:URL>WMO Core Metadata Profile</gmd:URL>
+         </gmd:linkage>
+      </gmd:CI_OnlineResource>
+   </grg:uniformResourceIdentifier>
+   <grg:operatingLanguage>
+      <grg:RE_Locale>
+         <grg:name>
+            <gco:CharacterString>English</gco:CharacterString>
+         </grg:name>
+         <grg:language>
+            <gmd:LanguageCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_LanguageCode"
+                              codeListValue="eng"/>
+         </grg:language>
+         <grg:characterEncoding>
+            <gmd:MD_CharacterSetCode codeListValue="utf8"
+                                     codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode"/>
+         </grg:characterEncoding>
+      </grg:RE_Locale>
+   </grg:operatingLanguage>
+   <grg:alternativeLanguages>
+      <grg:RE_Locale>
+         <grg:name>
+            <gco:CharacterString>English</gco:CharacterString>
+         </grg:name>
+         <grg:language>
+            <gmd:LanguageCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_LanguageCode"
+                              codeListValue="eng"/>
+         </grg:language>
+         <grg:characterEncoding>
+            <gmd:MD_CharacterSetCode codeListValue="utf8"
+                                     codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode"/>
+         </grg:characterEncoding>
+      </grg:RE_Locale>
+   </grg:alternativeLanguages>
+   <grg:version>
+      <grg:RE_Version>
+         <grg:versionNumber>
+            <gco:CharacterString>1.3.1</gco:CharacterString>
+         </grg:versionNumber>
+         <grg:versionDate>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:versionDate>
+      </grg:RE_Version>
+   </grg:version>
+   <grg:owner>
+      <grg:RE_RegisterOwner>
+         <grg:name>
+            <gco:CharacterString>WMO</gco:CharacterString>
+         </grg:name>
+         <grg:contact xlink:href="#WMO_Contact"/>
+      </grg:RE_RegisterOwner>
+   </grg:owner>
+   <grg:submitter>
+      <grg:RE_SubmittingOrganization>
+         <grg:name>
+            <gco:CharacterString>WMO</gco:CharacterString>
+         </grg:name>
+         <grg:contact xlink:href="#WMO_Contact"/>
+      </grg:RE_SubmittingOrganization>
+   </grg:submitter>
+   <grg:containedItemClass>
+      <grg:RE_ItemClass id="Item_Class">
+         <grg:name>
+            <gco:CharacterString>gnreg:RE_RegisterItem</gco:CharacterString>
+         </grg:name>
+         <grg:technicalStandard>
+            <gmd:CI_Citation>
+               <gmd:title>
+                  <gco:CharacterString>GeoNetwork Extension to RE_RegisterItem in ISO19135</gco:CharacterString>
+               </gmd:title>
+               <gmd:date>
+                  <gmd:CI_Date>
+                     <gmd:date>
+                        <gco:Date>2012-04-29</gco:Date>
+                     </gmd:date>
+                     <gmd:dateType>
+                        <gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode"
+                                             codeListValue="creation"/>
+                     </gmd:dateType>
+                  </gmd:CI_Date>
+               </gmd:date>
+               <gmd:edition>
+                  <gco:CharacterString>First</gco:CharacterString>
+               </gmd:edition>
+            </gmd:CI_Citation>
+         </grg:technicalStandard>
+      </grg:RE_ItemClass>
+   </grg:containedItemClass>
+   <grg:manager>
+      <grg:RE_RegisterManager>
+         <grg:name>
+            <gco:CharacterString>WMO</gco:CharacterString>
+         </grg:name>
+         <grg:contact>
+            <gmd:CI_ResponsibleParty id="WMO_Contact">
+               <gmd:organisationName>
+                  <gco:CharacterString>WMO Information System, World Meteorological Organization</gco:CharacterString>
+               </gmd:organisationName>
+               <gmd:contactInfo>
+                  <gmd:CI_Contact>
+                     <gmd:address>
+                        <gmd:CI_Address>
+                           <gmd:deliveryPoint>
+                              <gco:CharacterString>7 bis, Avenue de la Paix</gco:CharacterString>
+                           </gmd:deliveryPoint>
+                           <gmd:deliveryPoint>
+                              <gco:CharacterString>P.O. Box 2300</gco:CharacterString>
+                           </gmd:deliveryPoint>
+                           <gmd:city>
+                              <gco:CharacterString>Geneva</gco:CharacterString>
+                           </gmd:city>
+                           <gmd:postalCode>
+                              <gco:CharacterString>CH-1211</gco:CharacterString>
+                           </gmd:postalCode>
+                           <gmd:country>
+                              <gco:CharacterString>Switzerland</gco:CharacterString>
+                           </gmd:country>
+                        </gmd:CI_Address>
+                     </gmd:address>
+                  </gmd:CI_Contact>
+               </gmd:contactInfo>
+               <gmd:role>
+                  <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelist.xml#CI_RoleCode"
+                                   codeListValue="custodian">custodian</gmd:CI_RoleCode>
+               </gmd:role>
+            </gmd:CI_ResponsibleParty>
+         </grg:contact>
+      </grg:RE_RegisterManager>
+   </grg:manager>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem"
+                             uuid="WMO Core Metadata Profile/WMO_CategoryCode">
+         <grg:itemIdentifier>
+            <gco:Integer>49</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>WMO_CategoryCode</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>additional topic categories for WMO community</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>59</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>71</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>83</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>96</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>108</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>120</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>132</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>144</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>156</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>169</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>181</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>193</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>205</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>217</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>229</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>242</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>254</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>266</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>278</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>290</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>302</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>315</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>327</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>339</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>351</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>363</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>375</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>388</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="specialization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/WMO_CategoryCode</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem"
+                             uuid="WMO Core Metadata Profile/weatherObservations">
+         <grg:itemIdentifier>
+            <gco:Integer>59</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>weatherObservations</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>weather observations</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/weatherObservations</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem"
+                             uuid="WMO Core Metadata Profile/weatherForecasts">
+         <grg:itemIdentifier>
+            <gco:Integer>71</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>weatherForecasts</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>weather forecasts</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/weatherForecasts</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem" uuid="WMO Core Metadata Profile/meteorology">
+         <grg:itemIdentifier>
+            <gco:Integer>83</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>meteorology</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>Meteorology</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/meteorology</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem" uuid="WMO Core Metadata Profile/hydrology">
+         <grg:itemIdentifier>
+            <gco:Integer>96</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>hydrology</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>Hydrology</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/hydrology</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem" uuid="WMO Core Metadata Profile/climatology">
+         <grg:itemIdentifier>
+            <gco:Integer>108</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>climatology</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>Climatology</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/climatology</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem"
+                             uuid="WMO Core Metadata Profile/landMeteorologyClimate">
+         <grg:itemIdentifier>
+            <gco:Integer>120</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>landMeteorologyClimate</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>land meteorology climate</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/landMeteorologyClimate</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem"
+                             uuid="WMO Core Metadata Profile/synopticMeteorology">
+         <grg:itemIdentifier>
+            <gco:Integer>132</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>synopticMeteorology</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>synoptic meteorology</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/synopticMeteorology</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem"
+                             uuid="WMO Core Metadata Profile/marineMeteorology">
+         <grg:itemIdentifier>
+            <gco:Integer>144</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>marineMeteorology</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>marine meteorology</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/marineMeteorology</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem"
+                             uuid="WMO Core Metadata Profile/agriculturalMeteorology">
+         <grg:itemIdentifier>
+            <gco:Integer>156</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>agriculturalMeteorology</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>agricultural meteorology</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/agriculturalMeteorology</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem" uuid="WMO Core Metadata Profile/aerology">
+         <grg:itemIdentifier>
+            <gco:Integer>169</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>aerology</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>Aerology</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/aerology</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem"
+                             uuid="WMO Core Metadata Profile/marineAerology">
+         <grg:itemIdentifier>
+            <gco:Integer>181</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>marineAerology</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>marine aerology</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/marineAerology</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem" uuid="WMO Core Metadata Profile/oceanography">
+         <grg:itemIdentifier>
+            <gco:Integer>193</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>oceanography</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>Oceanography</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/oceanography</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem"
+                             uuid="WMO Core Metadata Profile/landHydrology">
+         <grg:itemIdentifier>
+            <gco:Integer>205</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>landHydrology</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>land hydrology</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/landHydrology</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem"
+                             uuid="WMO Core Metadata Profile/rocketSounding">
+         <grg:itemIdentifier>
+            <gco:Integer>217</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>rocketSounding</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>rocket sounding</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/rocketSounding</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem" uuid="WMO Core Metadata Profile/pollution">
+         <grg:itemIdentifier>
+            <gco:Integer>229</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>pollution</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>Pollution</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/pollution</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem"
+                             uuid="WMO Core Metadata Profile/waterPollution">
+         <grg:itemIdentifier>
+            <gco:Integer>242</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>waterPollution</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>water pollution</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/waterPollution</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem"
+                             uuid="WMO Core Metadata Profile/landWaterPollution">
+         <grg:itemIdentifier>
+            <gco:Integer>254</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>landWaterPollution</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>land water pollution</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/landWaterPollution</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem" uuid="WMO Core Metadata Profile/seaPollution">
+         <grg:itemIdentifier>
+            <gco:Integer>266</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>seaPollution</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>sea pollution</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/seaPollution</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem"
+                             uuid="WMO Core Metadata Profile/landPollution">
+         <grg:itemIdentifier>
+            <gco:Integer>278</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>landPollution</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>land pollution</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/landPollution</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem" uuid="WMO Core Metadata Profile/airPollution">
+         <grg:itemIdentifier>
+            <gco:Integer>290</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>airPollution</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>air pollution</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/airPollution</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem" uuid="WMO Core Metadata Profile/glaciology">
+         <grg:itemIdentifier>
+            <gco:Integer>302</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>glaciology</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>Glaciology</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/glaciology</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem" uuid="WMO Core Metadata Profile/actinometry">
+         <grg:itemIdentifier>
+            <gco:Integer>315</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>actinometry</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>Actinometry</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/actinometry</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem"
+                             uuid="WMO Core Metadata Profile/satelliteObservation">
+         <grg:itemIdentifier>
+            <gco:Integer>327</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>satelliteObservation</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>satellite observation</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/satelliteObservation</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem"
+                             uuid="WMO Core Metadata Profile/airplaneObservation">
+         <grg:itemIdentifier>
+            <gco:Integer>339</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>airplaneObservation</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>airplane observation</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/airplaneObservation</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem"
+                             uuid="WMO Core Metadata Profile/observationPlatform">
+         <grg:itemIdentifier>
+            <gco:Integer>351</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>observationPlatform</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>observation platform</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/observationPlatform</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem" uuid="WMO Core Metadata Profile/spaceWeather">
+         <grg:itemIdentifier>
+            <gco:Integer>363</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>spaceWeather</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>space weather</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/spaceWeather</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem"
+                             uuid="WMO Core Metadata Profile/atmosphericComposition">
+         <grg:itemIdentifier>
+            <gco:Integer>375</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>atmosphericComposition</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>atmospheric composition</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/atmosphericComposition</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+   <grg:containedItem>
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem" uuid="WMO Core Metadata Profile/radiation">
+         <grg:itemIdentifier>
+            <gco:Integer>388</gco:Integer>
+         </grg:itemIdentifier>
+         <grg:name>
+            <gco:CharacterString>radiation</gco:CharacterString>
+         </grg:name>
+         <grg:status>
+            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
+         </grg:status>
+         <grg:dateAccepted>
+            <gco:Date>2013-07-11</gco:Date>
+         </grg:dateAccepted>
+         <grg:definition>
+            <gco:CharacterString>radiation</gco:CharacterString>
+         </grg:definition>
+         <grg:fieldOfApplication>
+            <grg:RE_FieldOfApplication>
+               <grg:name>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:name>
+               <grg:description>
+                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+               </grg:description>
+            </grg:RE_FieldOfApplication>
+         </grg:fieldOfApplication>
+         <grg:additionInformation>
+            <grg:RE_AdditionInformation>
+               <grg:dateProposed>
+                  <gco:Date>2013-07-11</gco:Date>
+               </grg:dateProposed>
+               <grg:justification>
+                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
+               </grg:justification>
+               <grg:status>
+                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
+               </grg:status>
+               <grg:sponsor>
+                  <grg:RE_SubmittingOrganization>
+                     <grg:name>
+                        <gco:CharacterString>WMO</gco:CharacterString>
+                     </grg:name>
+                     <grg:contact xlink:href="#WMO_Contact"/>
+                  </grg:RE_SubmittingOrganization>
+               </grg:sponsor>
+            </grg:RE_AdditionInformation>
+         </grg:additionInformation>
+         <grg:itemClass xlink:href="#Item_Class"/>
+         <grg:specificationLineage>
+            <grg:RE_Reference>
+               <grg:itemIdentifierAtSource>
+                  <gco:CharacterString>51</gco:CharacterString>
+               </grg:itemIdentifierAtSource>
+               <grg:similarity>
+                  <grg:RE_SimilarityToSource codeListValue="generalization"
+                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
+               </grg:similarity>
+            </grg:RE_Reference>
+         </grg:specificationLineage>
+         <gnreg:itemIdentifier>
+            <gco:CharacterString>WMO Core Metadata Profile/radiation</gco:CharacterString>
+         </gnreg:itemIdentifier>
+      </gnreg:RE_RegisterItem>
+   </grg:containedItem>
+</grg:RE_Register>
