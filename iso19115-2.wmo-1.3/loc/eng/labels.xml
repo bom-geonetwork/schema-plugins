@@ -1,202 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <labels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:noNamespaceSchemaLocation="../../../labels.xsd"
-	xmlns:gmi="http://www.isotc211.org/2005/gmi"
-	xmlns:gml="http://www.opengis.net/gml/3.2">
+	xsi:noNamespaceSchemaLocation="../../../labels.xsd">
 
-	<!-- Add gmi: labels -->
+	<!-- from WMO Codelists 1.3.1 - these helpers are used with gmd:otherConstraints in 
+	     resourceConstraints/MD_LegalConstraints -->
 
-	<element name="gml:beginPosition">
-		<label>Begin date</label>
-		<description>Formatted as 2007-09-12T15:00:00 (YYYY-MM-DDTHH:mm:ss)</description>
-	</element>
-
-	<element name="gml:endPosition">
-		<label>End date</label>
-		<description>Formatted as 2007-09-12T15:00:00 (YYYY-MM-DDTHH:mm:ss)</description>
-	</element>
-
-	<element name="gml:relatedTime">
-		<label>Related time</label>
-		<description>Defines the relation of a given time to the object.</description>
+	<element name="WMO_DataLicenseCode" context="WMO_DataLicenseCode">
+		<label>WMO Data License</label>
+		<description>WMO Data License applied to the data resource – derived from WMO Resolution 25 and Resolution 40 (http://www.wmo.int/pages/about/exchangingdata_en.html)</description>
+		<helper sort="false">
+			<option show="y" value="WMOEssential">WMO Essential Data: free and unrestricted international exchange of basic meteorological data and products.</option>
+			<option show="y" value="WMOAdditional">WMO Additional Data: free and unrestricted access to data and products exchanged under the auspices of WMO to the research and education communities for non-commercial activities. A more precise definition of the data policy may be additionally supplied within the metadata. In all cases it shall be the responsibility of the data consumer to ensure that they understand the data policy specified by the data provider - which may necessitate dialogue with the data publisher for confirmation of terms and conditions.</option>
+			<option show="y" value="WMOOther">Data that is not covered by WMO Resolution 25 or WMO Resolution 40; e.g. aviation OPMET data. Data marked with "WMO Other" data policy shall be treated like "WMO Additional" where a more precise definition of the data policy may be additionally supplied within the metadata. In all cases it shall be the responsibility of the data consumer to ensure that they understand the data policy specified by the data provider - which may necessitate dialogue with the data publisher for confirmation of terms and conditions.</option>
+			<option show="y" value="NoLimitation">No limitation on distribution or use.</option>
+		</helper>
 	</element>
 
-	<element name="gml:coordinates">
-		<label>Coordinates</label>
-		<description>Used to record an array of tuples or coordinates.</description>
+	<element name="WMO_GTSProductCategoryCode" context="WMO_GTSProductCategoryCode">
+		<label>WMO GTS Product Category</label>
+		<description>Product category used for prioritising messages on the WMO Global Telecommunications System (GTS)</description>
+		<helper sort="false">
+			<option show="y" value="GTSPriority1">GTS Priority 1 -  highest priority products</option>
+			<option show="y" value="GTSPriority2">GTS Priority 2</option>
+			<option show="y" value="GTSPriority3">GTS Priority 3</option>
+			<option show="y" value="GTSPriority4">GTS Priority 4</option>
+		</helper>
 	</element>
 
-	<element name="gml:Polygon">
-		<label>Polygon</label>
-		<description>A gml:Polygon is a special surface that is defined by a single surface patch.
-            The boundary of this patch is coplanar and the polygon uses planar interpolation in its
-            interior.</description>
-	</element>
-
-	<element name="gml:Point">
-		<label>Point</label>
-		<description>A gml:Point is defined by a single coordinate tuple.</description>
-		<example>74. -37.</example>
-	</element>
-
-	<element name="gml:LineString">
-		<label>Line</label>
-		<description>A gml:LineString is a special curve that consists of a single segment with
-            linear interpolation. It is defined by two or more coordinate tuples, with linear
-            interpolation between them.</description>
-	</element>
-
-	<element name="gml:LinearRing">
-		<label>Linear ring</label>
-		<description>A gml:LinearRing is defined by four or more coordinate tuples, with linear
-            interpolation between them; the first and last coordinates shall be
-            coincident.</description>
-	</element>
-
-	<element name="gml:exterior">
-		<label>Outer boundary</label>
-		<description>The outer boundary of a solid.</description>
-	</element>
-
-	<element name="gml:interior">
-		<label>Inner boundary</label>
-		<description>The inner boundary of a solid</description>
-	</element>
-
-
-	<element name="gml:begin">
-		<label>Begin</label>
-		<description />
-	</element>
-	<element name="gml:end">
-		<label>End</label>
-		<description />
-	</element>
-	<element name="gml:duration">
-		<label>Duration</label>
-		<description>Conforms to the ISO 8601 syntax for temporal length as implemented by the XML Schema duration type.</description>
-	</element>
-	<element name="gml:timeInterval">
-		<label>Time interval</label>
-		<description>conforms to ISO 11404 which is based on floating point values for temporal length.
-    		ISO 11404 syntax specifies the use of a positiveInteger together with appropriate values for radix and factor. The resolution of the time interval is to one radix ^(-factor) of the specified time unit.
-    		The value of the unit is either selected from the units for time intervals from ISO 31-1:1992, or is another suitable unit.  The encoding is defined for GML in gml:TimeUnitType. The second component of this union type provides a method for indicating time units other than the six standard units given in the enumeration.</description>
-	</element>
-	<element name="gml:name">
-		<label>Name</label>
-		<description></description>
-	</element>
-	<element name="gml:metaDataProperty">
-		<label>Metadata property</label>
-		<description></description>
-	</element>
-	<element name="gml:identifier">
-		<label>Identifier</label>
-		<description></description>
-	</element>
-	<element name="gml:description">
-		<label>Description</label>
-		<description>Text description of the element</description>
-	</element>
-	<element name="gml:descriptionReference">
-		<label>Description reference</label>
-		<description></description>
-	</element>
-	<element name="gml:TimeInstant">
-		<label>Time instant</label>
-		<description />
-	</element>
-	<element name="gml:TimePosition">
-		<label>Time position</label>
-		<description />
-	</element>
-	<element name="gml:timePosition">
-		<label>Time position</label>
-		<description />
-	</element>
-	<element name="gml:TimePeriod">
-		<label>Time period</label>
-		<description />
-	</element>
-	<element name="gml:TimeNode">
-		<label>Time node</label>
-		<description />
-	</element>
-	<element name="gml:TimeEdge">
-		<label>Time edge</label>
-		<description />
-	</element>
-	<element name="gml:ProjectedCRS">
-		<label>Projected CRS</label>
-		<description />
-	</element>
-
-	<element name="gml:id">
-		<label>Identifier</label>
-		<description>Unique identifier</description>
-	</element>
-
-	<element name="gml:id" id="191.0" context="gmd:MD_CRS">
-		<label>Ellipsoid</label>
-		<description>Identity of the ellipsoid used</description>
-		<help>identity of the ellipsoid used</help>
-	</element>
-    <element name="gml:axis">
-        <label>Axis</label>
-    </element>
-    <element name="gml:axisAbbrev">
-        <label>Axis abbreviation</label>
-    </element>
-    <element name="gml:axisDirection">
-        <label>Axis direction</label>
-    </element>
-    <element name="gml:maximumValue">
-        <label>Maximum value</label>
-    </element>
-    <element name="gml:minimumValue">
-        <label>Minimum value</label>
-    </element>
-    <element name="gml:scope">
-        <label>Scope</label>
-    </element>
-    <element name="gml:VerticalCRS">
-        <label>Vertical CRS</label>
-    </element>
-    <element name="gml:remarks">
-        <label>Remarks</label>
-    </element>
-    <element name="gml:domainOfValidity">
-        <label>Domain of validity</label>
-    </element>
-    <element name="gml:verticalCS">
-        <label>Vertical CS</label>
-    </element>
-    <element name="gml:VerticalCS">
-        <label>Vertical CS</label>
-    </element>
-    <element name="gml:CoordinateSystemAxis">
-        <label>Coordinate system axis</label>
-    </element>
-    <element name="gml:rangeMeaning">
-        <label>Range meaning</label>
-    </element>
-    <element name="gml:verticalDatum">
-        <label>Vertical datum</label>
-    </element>
-    <element name="gml:VerticalDatum">
-        <label>Vertical datum</label>
-    </element>
-    <element name="gml:realizationEpoch">
-        <label>Realization epoch</label>
-    </element>
-    <!-- ==================================================== -->
-    <element name="gml:TimePeriodTypeCHOICE_ELEMENT2">
-      <label>Begin time</label>
-      <description>Choose the begin time element</description>
-    </element>
-    <!-- ==================================================== -->
-    <element name="gml:TimePeriodTypeCHOICE_ELEMENT3">
-      <label>End Time</label>
-      <description>Choose the end time element</description>
-    </element>
 </labels>
