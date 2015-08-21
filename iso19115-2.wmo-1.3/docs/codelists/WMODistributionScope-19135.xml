@@ -5,13 +5,13 @@
                  xmlns:gnreg="http://geonetwork-opensource.org/register"
                  xmlns:xlink="http://www.w3.org/1999/xlink"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                 uuid="1fcce159-f5be-4ea3-99f2-85df12613340"
+                 uuid="4f540362-c23e-41e3-8675-7261bbacdeb5"
                  xsi:schemaLocation="http://www.isotc211.org/2005/grg http://www.isotc211.org/2005/grg/grg.xsd http://www.isotc211.org/2005/gmd http://www.isotc211.org/2005/gmd/gmd.xsd http://www.isotc211.org/2005/gco http://www.isotc211.org/2005/gco/gco.xsd">
    <grg:name>
-      <gco:CharacterString>Product Categories from WMO Global Telecommunications System (GTS)</gco:CharacterString>
+      <gco:CharacterString>WMO Distribution Scope</gco:CharacterString>
    </grg:name>
    <grg:contentSummary>
-      <gco:CharacterString>Product category used for prioritising messages on the WMO Global Telecommunications System (GTS) - from Codelists for description of metadata datasets compliant with the WMO Core Metadata Profile version 1.3 (derived from ISO/TC 211 19115:2003 and 19139)</gco:CharacterString>
+      <gco:CharacterString>WMO Distribution Scope from Codelists for description of metadata datasets compliant with the WMO Core Metadata Profile version 1.3 (derived from ISO/TC 211 19115:2003 and 19139)</gco:CharacterString>
    </grg:contentSummary>
    <grg:uniformResourceIdentifier>
       <gmd:CI_OnlineResource>
@@ -147,12 +147,12 @@
    </grg:manager>
    <grg:containedItem>
       <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem"
-                             uuid="WMO Core Metadata Profile/WMO_GTSProductCategoryCode">
+                             uuid="WMO Core Metadata Profile/WMO_DistributionScopeCode">
          <grg:itemIdentifier>
-            <gco:Integer>49</gco:Integer>
+            <gco:Integer>53</gco:Integer>
          </grg:itemIdentifier>
          <grg:name>
-            <gco:CharacterString>WMO_GTSProductCategoryCode</gco:CharacterString>
+            <gco:CharacterString>WMO_DistributionScopeCode</gco:CharacterString>
          </grg:name>
          <grg:status>
             <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
@@ -161,7 +161,7 @@
             <gco:Date>2013-07-11</gco:Date>
          </grg:dateAccepted>
          <grg:definition>
-            <gco:CharacterString>Product category used for prioritising messages on the WMO Global Telecommunications System (GTS)</gco:CharacterString>
+            <gco:CharacterString>Scope of distribution for data published for exchange within WIS</gco:CharacterString>
          </grg:definition>
          <grg:fieldOfApplication>
             <grg:RE_FieldOfApplication>
@@ -198,7 +198,7 @@
          <grg:specificationLineage>
             <grg:RE_Reference>
                <grg:itemIdentifierAtSource>
-                  <gco:CharacterString>59</gco:CharacterString>
+                  <gco:CharacterString>63</gco:CharacterString>
                </grg:itemIdentifierAtSource>
                <grg:similarity>
                   <grg:RE_SimilarityToSource codeListValue="specialization"
@@ -209,7 +209,7 @@
          <grg:specificationLineage>
             <grg:RE_Reference>
                <grg:itemIdentifierAtSource>
-                  <gco:CharacterString>71</gco:CharacterString>
+                  <gco:CharacterString>75</gco:CharacterString>
                </grg:itemIdentifierAtSource>
                <grg:similarity>
                   <grg:RE_SimilarityToSource codeListValue="specialization"
@@ -220,18 +220,7 @@
          <grg:specificationLineage>
             <grg:RE_Reference>
                <grg:itemIdentifierAtSource>
-                  <gco:CharacterString>83</gco:CharacterString>
-               </grg:itemIdentifierAtSource>
-               <grg:similarity>
-                  <grg:RE_SimilarityToSource codeListValue="specialization"
-                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
-               </grg:similarity>
-            </grg:RE_Reference>
-         </grg:specificationLineage>
-         <grg:specificationLineage>
-            <grg:RE_Reference>
-               <grg:itemIdentifierAtSource>
-                  <gco:CharacterString>96</gco:CharacterString>
+                  <gco:CharacterString>87</gco:CharacterString>
                </grg:itemIdentifierAtSource>
                <grg:similarity>
                   <grg:RE_SimilarityToSource codeListValue="specialization"
@@ -240,17 +229,18 @@
             </grg:RE_Reference>
          </grg:specificationLineage>
          <gnreg:itemIdentifier>
-            <gco:CharacterString>WMO Core Metadata Profile/WMO_GTSProductCategoryCode</gco:CharacterString>
+            <gco:CharacterString>WMO Core Metadata Profile/WMO_DistributionScopeCode</gco:CharacterString>
          </gnreg:itemIdentifier>
       </gnreg:RE_RegisterItem>
    </grg:containedItem>
    <grg:containedItem>
-      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem" uuid="WMO Core Metadata Profile/GTSPriority1">
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem"
+                             uuid="WMO Core Metadata Profile/GlobalExchange">
          <grg:itemIdentifier>
-            <gco:Integer>59</gco:Integer>
+            <gco:Integer>63</gco:Integer>
          </grg:itemIdentifier>
          <grg:name>
-            <gco:CharacterString>GTSPriority1</gco:CharacterString>
+            <gco:CharacterString>GlobalExchange</gco:CharacterString>
          </grg:name>
          <grg:status>
             <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
@@ -259,7 +249,7 @@
             <gco:Date>2013-07-11</gco:Date>
          </grg:dateAccepted>
          <grg:definition>
-            <gco:CharacterString>GTS Priority 1 -  highest priority products</gco:CharacterString>
+            <gco:CharacterString>Data are published for global exchange via the WIS. Data shall be incorporated into the GISC Cache.</gco:CharacterString>
          </grg:definition>
          <grg:fieldOfApplication>
             <grg:RE_FieldOfApplication>
@@ -296,7 +286,7 @@
          <grg:specificationLineage>
             <grg:RE_Reference>
                <grg:itemIdentifierAtSource>
-                  <gco:CharacterString>51</gco:CharacterString>
+                  <gco:CharacterString>55</gco:CharacterString>
                </grg:itemIdentifierAtSource>
                <grg:similarity>
                   <grg:RE_SimilarityToSource codeListValue="generalization"
@@ -305,17 +295,18 @@
             </grg:RE_Reference>
          </grg:specificationLineage>
          <gnreg:itemIdentifier>
-            <gco:CharacterString>WMO Core Metadata Profile/GTSPriority1</gco:CharacterString>
+            <gco:CharacterString>WMO Core Metadata Profile/GlobalExchange</gco:CharacterString>
          </gnreg:itemIdentifier>
       </gnreg:RE_RegisterItem>
    </grg:containedItem>
    <grg:containedItem>
-      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem" uuid="WMO Core Metadata Profile/GTSPriority2">
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem"
+                             uuid="WMO Core Metadata Profile/RegionalExchange">
          <grg:itemIdentifier>
-            <gco:Integer>71</gco:Integer>
+            <gco:Integer>75</gco:Integer>
          </grg:itemIdentifier>
          <grg:name>
-            <gco:CharacterString>GTSPriority2</gco:CharacterString>
+            <gco:CharacterString>RegionalExchange</gco:CharacterString>
          </grg:name>
          <grg:status>
             <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
@@ -324,7 +315,7 @@
             <gco:Date>2013-07-11</gco:Date>
          </grg:dateAccepted>
          <grg:definition>
-            <gco:CharacterString>GTS Priority 2</gco:CharacterString>
+            <gco:CharacterString>Data are published for regional exchange via a GISC.</gco:CharacterString>
          </grg:definition>
          <grg:fieldOfApplication>
             <grg:RE_FieldOfApplication>
@@ -361,7 +352,7 @@
          <grg:specificationLineage>
             <grg:RE_Reference>
                <grg:itemIdentifierAtSource>
-                  <gco:CharacterString>51</gco:CharacterString>
+                  <gco:CharacterString>55</gco:CharacterString>
                </grg:itemIdentifierAtSource>
                <grg:similarity>
                   <grg:RE_SimilarityToSource codeListValue="generalization"
@@ -370,17 +361,18 @@
             </grg:RE_Reference>
          </grg:specificationLineage>
          <gnreg:itemIdentifier>
-            <gco:CharacterString>WMO Core Metadata Profile/GTSPriority2</gco:CharacterString>
+            <gco:CharacterString>WMO Core Metadata Profile/RegionalExchange</gco:CharacterString>
          </gnreg:itemIdentifier>
       </gnreg:RE_RegisterItem>
    </grg:containedItem>
    <grg:containedItem>
-      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem" uuid="WMO Core Metadata Profile/GTSPriority3">
+      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem"
+                             uuid="WMO Core Metadata Profile/OriginatingCentre">
          <grg:itemIdentifier>
-            <gco:Integer>83</gco:Integer>
+            <gco:Integer>87</gco:Integer>
          </grg:itemIdentifier>
          <grg:name>
-            <gco:CharacterString>GTSPriority3</gco:CharacterString>
+            <gco:CharacterString>OriginatingCentre</gco:CharacterString>
          </grg:name>
          <grg:status>
             <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
@@ -389,7 +381,7 @@
             <gco:Date>2013-07-11</gco:Date>
          </grg:dateAccepted>
          <grg:definition>
-            <gco:CharacterString>GTS Priority 3</gco:CharacterString>
+            <gco:CharacterString>Data are published for exchange directly via the originating centre.</gco:CharacterString>
          </grg:definition>
          <grg:fieldOfApplication>
             <grg:RE_FieldOfApplication>
@@ -426,7 +418,7 @@
          <grg:specificationLineage>
             <grg:RE_Reference>
                <grg:itemIdentifierAtSource>
-                  <gco:CharacterString>51</gco:CharacterString>
+                  <gco:CharacterString>55</gco:CharacterString>
                </grg:itemIdentifierAtSource>
                <grg:similarity>
                   <grg:RE_SimilarityToSource codeListValue="generalization"
@@ -435,72 +427,7 @@
             </grg:RE_Reference>
          </grg:specificationLineage>
          <gnreg:itemIdentifier>
-            <gco:CharacterString>WMO Core Metadata Profile/GTSPriority3</gco:CharacterString>
-         </gnreg:itemIdentifier>
-      </gnreg:RE_RegisterItem>
-   </grg:containedItem>
-   <grg:containedItem>
-      <gnreg:RE_RegisterItem gco:isoType="grg:RE_RegisterItem" uuid="WMO Core Metadata Profile/GTSPriority4">
-         <grg:itemIdentifier>
-            <gco:Integer>96</gco:Integer>
-         </grg:itemIdentifier>
-         <grg:name>
-            <gco:CharacterString>GTSPriority4</gco:CharacterString>
-         </grg:name>
-         <grg:status>
-            <grg:RE_ItemStatus>valid</grg:RE_ItemStatus>
-         </grg:status>
-         <grg:dateAccepted>
-            <gco:Date>2013-07-11</gco:Date>
-         </grg:dateAccepted>
-         <grg:definition>
-            <gco:CharacterString>GTS Priority 4</gco:CharacterString>
-         </grg:definition>
-         <grg:fieldOfApplication>
-            <grg:RE_FieldOfApplication>
-               <grg:name>
-                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
-               </grg:name>
-               <grg:description>
-                  <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
-               </grg:description>
-            </grg:RE_FieldOfApplication>
-         </grg:fieldOfApplication>
-         <grg:additionInformation>
-            <grg:RE_AdditionInformation>
-               <grg:dateProposed>
-                  <gco:Date>2013-07-11</gco:Date>
-               </grg:dateProposed>
-               <grg:justification>
-                  <gco:CharacterString>Needed for metadata themes</gco:CharacterString>
-               </grg:justification>
-               <grg:status>
-                  <grg:RE_DecisionStatus>final</grg:RE_DecisionStatus>
-               </grg:status>
-               <grg:sponsor>
-                  <grg:RE_SubmittingOrganization>
-                     <grg:name>
-                        <gco:CharacterString>WMO</gco:CharacterString>
-                     </grg:name>
-                     <grg:contact xlink:href="#WMO_Contact"/>
-                  </grg:RE_SubmittingOrganization>
-               </grg:sponsor>
-            </grg:RE_AdditionInformation>
-         </grg:additionInformation>
-         <grg:itemClass xlink:href="#Item_Class"/>
-         <grg:specificationLineage>
-            <grg:RE_Reference>
-               <grg:itemIdentifierAtSource>
-                  <gco:CharacterString>51</gco:CharacterString>
-               </grg:itemIdentifierAtSource>
-               <grg:similarity>
-                  <grg:RE_SimilarityToSource codeListValue="generalization"
-                                             codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#RE_SimilarityToSource"/>
-               </grg:similarity>
-            </grg:RE_Reference>
-         </grg:specificationLineage>
-         <gnreg:itemIdentifier>
-            <gco:CharacterString>WMO Core Metadata Profile/GTSPriority4</gco:CharacterString>
+            <gco:CharacterString>WMO Core Metadata Profile/OriginatingCentre</gco:CharacterString>
          </gnreg:itemIdentifier>
       </gnreg:RE_RegisterItem>
    </grg:containedItem>
