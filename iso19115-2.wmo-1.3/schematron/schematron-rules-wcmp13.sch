@@ -19,21 +19,83 @@ WMO Core Metadata Profile v1.3 schematron rules
 	<sch:pattern>
 		<sch:title>6.2.1 Each WIS Discovery Metadata record shall name explicitly all namespaces used within the record; use of default namespaces is prohibited.</sch:title>
 		<sch:rule context="*">
-			<sch:report test="not(.//*[name()=local-name()])">Failed at element <xsl:value-of select="name()"/></sch:report>
+			<sch:assert test="not(.//*[name()=local-name()])">Failed at element <xsl:value-of select="name()"/></sch:assert>
 		</sch:rule>
 	</sch:pattern>
 
 	<sch:pattern>
 		<sch:title>A WIS Discovery Metadata record may declare compliance with WCMP by appropriate metadataStandardName and metadataStandardVersion</sch:title>
 		<sch:rule context="/*">
-			<sch:report test="(string(gmd:metadataStandardName/*) != 'WMO Core Metadata Profile of ISO 19115 (WMO Core), 2003/Cor.1:2006 (ISO 19115), 2007 (ISO/TS 19139)') or (string(gmd:metadataStandardVersion/*) != '1.3')">A WIS Discovery Metadata record may declare compliance with WCMP by metadataStandardName = &quot;WMO Core Metadata Profile of ISO 19115 (WMO Core), 2003/Cor.1:2006 (ISO 19115), 2007 (ISO/TS 19139)&quot; (currently &quot;<value-of select="string(gmd:metadataStandardName/*)"/>&quot;) and metadataStandardVersion = &quot;1.3&quot; (currently &quot;<value-of select="string(gmd:metadataStandardVersion/*)"/>&quot;).</sch:report>
+			<sch:assert test="(string(gmd:metadataStandardName/*) != 'WMO Core Metadata Profile of ISO 19115 (WMO Core), 2003/Cor.1:2006 (ISO 19115), 2007 (ISO/TS 19139)') or (string(gmd:metadataStandardVersion/*) != '1.3')">A WIS Discovery Metadata record may declare compliance with WCMP by metadataStandardName = &quot;WMO Core Metadata Profile of ISO 19115 (WMO Core), 2003/Cor.1:2006 (ISO 19115), 2007 (ISO/TS 19139)&quot; (currently &quot;<sch:value-of select="string(gmd:metadataStandardName/*)"/>&quot;) and metadataStandardVersion = &quot;1.3&quot; (currently &quot;<sch:value-of select="string(gmd:metadataStandardVersion/*)"/>&quot;).</sch:assert>
 		</sch:rule>
 	</sch:pattern>
 
 	<sch:pattern>
 		<sch:title>WMO Core Metadata Profile recommends the use of a URI structure for gmd:fileIdentifier attributes.</sch:title>
 		<sch:rule context="/*">
-			<sch:report test="starts-with(gmd:fileIdentifier/*/text(), 'urn:x-wmo:md:')">[&#167;8.1 &#182;5] WMO Core Metadata Profile recommends the use of a URI structure for gmd:fileIdentifier attributes.</sch:report>
+			<sch:assert test="starts-with(gmd:fileIdentifier/*/text(), 'urn:x-wmo:md:')">WMO Core Metadata Profile recommends the use of a URI structure for gmd:fileIdentifier attributes.</sch:assert>
+		</sch:rule>
+	</sch:pattern>
+
+	<sch:pattern>
+		<sch:title>Requirement 8.2.1: Each WIS Discovery Metadata record shall include at least one keyword from the WMO_CategoryCode code list.</sch:title>
+		<sch:rule context="/*/gmd:identificationInfo/*">
+			<sch:assert test="count(gmd:descriptiveKeywords/gmd:MD_Keywords[gmd:thesaurusName//gmd:title/gco:CharacterString='WMO_CategoryCode']/gmd:keyword)>0">Unable to find a WMO_CategoryCode keyword.</sch:assert>
+		</sch:rule>
+	</sch:pattern>
+
+	<sch:pattern>
+		<sch:title>Requirement 8.2.2: Keywords from WMO_CategoryCode code list shall be defined as keyword type "theme"</sch:title>
+		<sch:rule context="/*/gmd:identificationInfo//gmd:descriptiveKeywords/gmd:MD_Keywords[gmd:thesaurusName//gmd:title/gco:CharacterString='WMO_CategoryCode']">
+			<sch:let name="keywordType" value="gmd:type/gmd:MD_KeywordTypeCode/@codeListValue"/>
+			<sch:assert test="gmd:type/gmd:MD_KeywordTypeCode/@codeListValue='theme'">keywordTypeCode <sch:value-of select="keywordType"/> is not valid, should be "theme".</sch:assert>
+		</sch:rule>
+	</sch:pattern>
+
+	<sch:pattern>
+		<sch:title>Requirement 8.2.3: All keywords sourced from a particular keyword thesaurus shall be grouped into a single instance of the MD_Keywords class.</sch:title>
+		<sch:rule context="/*/gmd:identificationInfo/*">
+			<sch:assert test="count(gmd:descriptiveKeywords/gmd:MD_Keywords[gmd:thesaurusName//gmd:title/gco:CharacterString='WMO_CategoryCode'])>1">More than one WMO_CategoryCode keyword grouping found.</sch:assert>
+			<sch:assert test="count(gmd:descriptiveKeywords/gmd:MD_Keywords[gmd:thesaurusName//gmd:title/gco:CharacterString='WMO_DistributionScopeCode'])>1">More than one WMO_DistribitionScopeCode keyword grouping found.</sch:assert>
+		</sch:rule>
+	</sch:pattern>
+
+	<sch:pattern>
+		<sch:title>Requirement 8.2.4: Each WIS Discovery Metadata record describing geographic data shall include the description of at least one geographic bounding box defining the spatial extent of the data.</sch:title>
+		<sch:rule context="/*[gmd:hierarchyLevel/gmd:MD_ScopeCode=('dataset','')]/gmd:identificationInfo/*">
+			<sch:assert test="count(gmd:extent/gmd:EX_Extent/gmd:geographicExtent/gmd:EX_GeographicBoundingBox)>0">No EX_GeographicBoundingBox elements found.</sch:assert>
+		</sch:rule>
+	</sch:pattern>
+
+	<!-- For globally exchanged datasets via the WIS - context means they only apply if there is 
+	     a WMO_DistributionScopeCode keyword set to GlobalExchange -->
+	<sch:pattern>
+		<sch:title>Requirement 9.1.1: A WIS Discovery Metadata record describing data for global exchange via the WIS shall indicate the scope of the distribution using the keyword "GlobalExchange" of type "dataCentre" from thesaurus WMO_DistributionScopeCode</sch:title>
+		<sch:rule context="/*/gmd:identificationInfo/*/gmd:descriptiveKeywords[gmd:MD_Keywords/gmd:keyword/*[.='GlobalExchange']]">
+			<sch:assert test="gmd:MD_Keywords/gmd:thesaurusName//gmd:title/gco:CharacterString='WMO_DistributionScopeCode' and gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode/@codeListValue='dataCentre'">WMO_DistributionScopeCode thesaurus title and/or MD_KeywordTypeCode not set to dataCentre.</sch:assert>
+		</sch:rule>
+	</sch:pattern>
+
+	<sch:pattern>
+		<sch:title>Requirement 9.2.1: A WIS Discovery Metadata record describing data for global exchange via the WIS shall have a gmd:MD_Metadata/gmd:fileIdentifier element beginning with 'urn:x-wmo:md:'</sch:title>
+		<sch:rule context="/*[gmd:identificationInfo/*/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/*[.='GlobalExchange']]">
+			<sch:assert test="starts-with(gmd:fileIdentifier/gco:CharacterString,'urn:x-wmo:md:')">fileIdentifier doesn't start with 'urn:x-wmo:md:'</sch:assert>
+		</sch:rule>
+	</sch:pattern>
+
+	<sch:pattern>
+		<sch:title>Requirement 9.3.1: A WIS Discovery Metadata record describing data for global exchange via the WIS shall indicate the WMO Data License as MD_LegalConstraint/otherConstraints using one and only one term from the WMO_DataLicenseCode code list.</sch:title>
+		<sch:rule context="/*/gmd:identificationInfo/*[gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/*[.='GlobalExchange']]">
+			<sch:let name="numberOfConstraints" value="count(gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints/gco:CharacterString[starts-with='WMO'])"/>
+			<sch:assert test="$numberOfConstraints!=1">Condition not met. There are <sch:value-of select="$numberOfConstraints"/> from WMO_DataLicenseCode code list.</sch:assert>
+		</sch:rule>
+	</sch:pattern>
+
+	<sch:pattern>
+		<sch:title>Requirement 9.3.2: A WIS Discovery Metadata record describing data for global exchange via the WIS shall indicate the GTS Priority as MD_LegalConstraint/otherConstraints using one and only one term from the WMO_GTSProductCategoryCode code list.</sch:title>
+		<sch:rule context="/*/gmd:identificationInfo/*[gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/*[.='GlobalExchange']]">
+			<sch:let name="numberOfConstraints" value="count(gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints/gco:CharacterString[starts-with='GTS'])"/>
+			<sch:assert test="$numberOfConstraints!=1">Condition not met. There are <sch:value-of select="$numberOfConstraints"/> from GTSProductCategoryCode code list.</sch:assert>
 		</sch:rule>
 	</sch:pattern>
 
