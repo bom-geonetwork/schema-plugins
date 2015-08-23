@@ -58,7 +58,7 @@
                 gmd:identificationInfo/*/gmd:citation/*/gmd:date[1]
                 |gmd:identificationInfo/*/gmd:language
 								|gmd:identificationInfo/*/gmd:citation/*/gmd:edition
-                |gmd:topicCategory
+                |gmd:identificationInfo/*/gmd:topicCategory
                 |gmd:identificationInfo/*/gmd:descriptiveKeywords
                 |gmd:identificationInfo/*/gmd:graphicOverview[1]
                 "> </xsl:apply-templates>
@@ -83,6 +83,7 @@
               select="
               gmd:identificationInfo/*/gmd:spatialResolution/gmd:MD_Resolution
               |gmd:identificationInfo/*/gmd:spatialRepresentationType
+              |gmd:identificationInfo/*/gmd:resourceMaintenance
               |gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage/gmd:statement
               "
             > </xsl:apply-templates>
