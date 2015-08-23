@@ -98,7 +98,7 @@ WMO Core Metadata Profile v1.3 schematron rules
 	<sch:pattern>
 		<sch:title>Requirement 9.3.1: A WIS Discovery Metadata record describing data for global exchange via the WIS shall indicate the WMO Data License as MD_LegalConstraint/otherConstraints using one and only one term from the WMO_DataLicenseCode code list.</sch:title>
 		<sch:rule context="/*[name()='gmd:MD_Metadata' or name()='gmi:MI_Metadata']/gmd:identificationInfo/gmd:MD_DataIdentification[gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/*[(name()='gmx:Anchor' or name()='gco:CharacterString') and string()='GlobalExchange']]">
-			<sch:let name="numberOfConstraints" value="count(gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints/gco:CharacterString[starts-with='WMO'])"/>
+			<sch:let name="numberOfConstraints" value="count(gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints/*[(name()='gmx:Anchor' or name()='gco:CharacterString') and starts-with(string(),'WMO')])"/>
 			<sch:report test="$numberOfConstraints=1">There are <sch:value-of select="$numberOfConstraints"/> from WMO_DataLicenseCode code list.</sch:report>
 			<sch:assert test="$numberOfConstraints=1">Condition not met. There are <sch:value-of select="$numberOfConstraints"/> from WMO_DataLicenseCode code list.</sch:assert>
 		</sch:rule>
@@ -107,7 +107,7 @@ WMO Core Metadata Profile v1.3 schematron rules
 	<sch:pattern>
 		<sch:title>Requirement 9.3.2: A WIS Discovery Metadata record describing data for global exchange via the WIS shall indicate the GTS Priority as MD_LegalConstraint/otherConstraints using one and only one term from the WMO_GTSProductCategoryCode code list.</sch:title>
 		<sch:rule context="/*[name()='gmd:MD_Metadata' or name()='gmi:MI_Metadata']/gmd:identificationInfo/gmd:MD_DataIdentification[gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/*[(name()='gmx:Anchor' or name()='gco:CharacterString') and string()='GlobalExchange']]">
-			<sch:let name="numberOfConstraints" value="count(gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints/gco:CharacterString[starts-with='GTS'])"/>
+			<sch:let name="numberOfConstraints" value="count(gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints/*[(name()='gmx:Anchor' or name()='gco:CharacterString') and starts-with(string(),'GTS')])"/>
 			<sch:report test="$numberOfConstraints=1">There are <sch:value-of select="$numberOfConstraints"/> from GTSProductCategoryCode code list.</sch:report>
 			<sch:assert test="$numberOfConstraints=1">Condition not met. There are <sch:value-of select="$numberOfConstraints"/> from GTSProductCategoryCode code list.</sch:assert>
 		</sch:rule>
