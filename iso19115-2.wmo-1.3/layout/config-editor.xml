@@ -223,12 +223,13 @@
 					<!-- Resource Constraints/Legal Constraints for WMO -->
 
 					<!-- Legal Constraints with WMO_DataLicenseCode  -->
-          <field name="WMO_DataLicenseCode" templateModeOnly="true" isMissingLabel="notSpecified" xpath="/*/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints[starts-with(gmd:MD_LegalConstraints/gmd:otherConstraints/gco:CharacterString,'WMO')]" del=".">
+          <field name="WMO_DataLicenseCode" templateModeOnly="true" isMissingLabel="notSpecified" xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints[gmd:MD_LegalConstraints/gmd:otherConstraints/gmx:Anchor/@xlink:href='http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_DataLicenseCode']" del=".">
             <template>
               <values>
-                <key label="WMO_DataLicenseCode" xpath="gmd:MD_LegalConstraints/gmd:otherConstraints/gco:CharacterString" tooltip="WMO_DataLicenseCode">
+                <key label="WMO_DataLicenseCode" xpath="gmd:MD_LegalConstraints/gmd:otherConstraints/gmx:Anchor" tooltip="WMO_DataLicenseCode">
                   <helper name="WMO_DataLicenseCode" context="WMO_DataLicenseCode"></helper>
                 </key>
+                <key label="WMO_DataLicenseOtherRestrictions" xpath="gmd:MD_LegalConstraints/gmd:otherConstraints/gco:CharacterString" tooltip="WMO_DataLicenseOtherRestrictions" use="textarea"/>
               </values>
               <snippet>
 								<gmd:resourceConstraints>
@@ -240,7 +241,10 @@
                         <gmd:MD_RestrictionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</gmd:MD_RestrictionCode>
                      </gmd:useConstraints>
                      <gmd:otherConstraints>
-                        <gco:CharacterString>{{WMO_DataLicenseCode}}</gco:CharacterString>
+                        <gmx:Anchor xlink:href="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_DataLicenseCode">{{WMO_DataLicenseCode}}</gmx:Anchor>
+                      </gmd:otherConstraints>
+                      <gmd:otherConstraints>
+                        <gco:CharacterString>{{WMO_DataLicenseOtherRestrictions}}</gco:CharacterString>
                       </gmd:otherConstraints>
                   </gmd:MD_LegalConstraints>
                 </gmd:resourceConstraints>	
@@ -249,10 +253,10 @@
         	</field>
 
 					<!-- Legal Constraints with WMO_GTSProductCategoryCode  -->
-          <field name="WMO_GTSProductCategoryCode" templateModeOnly="true" isMissingLabel="notSpecified" xpath="/*/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints[starts-with(gmd:MD_LegalConstraints/gmd:otherConstraints/gco:CharacterString,'GTS')]" del=".">
+          <field name="WMO_GTSProductCategoryCode" templateModeOnly="true" isMissingLabel="notSpecified" xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints[gmd:MD_LegalConstraints/gmd:otherConstraints/gmx:Anchor/@xlink:href='http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_GTSProductCategoryCode']" del=".">
             <template>
               <values>
-                <key label="WMO_GTSProductCategoryCode" xpath="gmd:MD_LegalConstraints/gmd:otherConstraints/gco:CharacterString" tooltip="WMO_GTSProductCategoryCode">
+                <key label="WMO_GTSProductCategoryCode" xpath="gmd:MD_LegalConstraints/gmd:otherConstraints/gmx:Anchor" tooltip="WMO_GTSProductCategoryCode">
                   <helper name="WMO_GTSProductCategoryCode" context="WMO_GTSProductCategoryCode"></helper>
                 </key>
               </values>
@@ -266,7 +270,7 @@
                         <gmd:MD_RestrictionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</gmd:MD_RestrictionCode>
                      </gmd:useConstraints>
                      <gmd:otherConstraints>
-                        <gco:CharacterString>{{WMO_GTSProductCategoryCode}}</gco:CharacterString>
+                        <gmx:Anchor xlink:href="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_GTSProductCategoryCode">{{WMO_GTSProductCategoryCode}}</gmx:Anchor>
                       </gmd:otherConstraints>
                   </gmd:MD_LegalConstraints>
                 </gmd:resourceConstraints>	

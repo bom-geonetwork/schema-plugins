@@ -197,32 +197,6 @@
                      </gmd:maintenanceNote>
                   </gmd:MD_MaintenanceInformation>
                </gmd:resourceMaintenance>
-               <gmd:resourceConstraints>
-                  <gmd:MD_LegalConstraints>
-                     <gmd:accessConstraints>
-                        <gmd:MD_RestrictionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</gmd:MD_RestrictionCode>
-                     </gmd:accessConstraints>
-                     <gmd:useConstraints>
-                        <gmd:MD_RestrictionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</gmd:MD_RestrictionCode>
-                     </gmd:useConstraints>
-                     <gmd:otherConstraints>
-                        <gco:CharacterString>WMOOther</gco:CharacterString>
-                      </gmd:otherConstraints>
-                  </gmd:MD_LegalConstraints>
-               </gmd:resourceConstraints>
-               <gmd:resourceConstraints>
-                  <gmd:MD_LegalConstraints>
-                     <gmd:accessConstraints>
-                        <gmd:MD_RestrictionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</gmd:MD_RestrictionCode>
-                     </gmd:accessConstraints>
-                     <gmd:useConstraints>
-                        <gmd:MD_RestrictionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</gmd:MD_RestrictionCode>
-                     </gmd:useConstraints>
-                     <gmd:otherConstraints>
-                        <gco:CharacterString>GTSPriority1</gco:CharacterString>
-                      </gmd:otherConstraints>
-                  </gmd:MD_LegalConstraints>
-               </gmd:resourceConstraints>
                <gmd:language>
                   <gmd:LanguageCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#LanguageCode" codeListValue="eng">eng</gmd:LanguageCode>
                </gmd:language>

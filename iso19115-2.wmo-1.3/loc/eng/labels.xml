@@ -16,6 +16,11 @@
 		</helper>
 	</element>
 
+	<element name="WMO_DataLicenseOtherRestrictions" context="WMO_DataLicenseOtherRestrictions">
+		<label>WMO Data License - Other Constraints</label>
+		<description>Other Constraints or data policies that may apply to the data and products - use this field to describe these policies.</description>
+	</element>
+
 	<element name="WMO_GTSProductCategoryCode" context="WMO_GTSProductCategoryCode">
 		<label>WMO GTS Product Category</label>
 		<description>Product category used for prioritising messages on the WMO Global Telecommunications System (GTS)</description>
