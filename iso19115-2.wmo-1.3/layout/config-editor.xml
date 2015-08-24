@@ -274,7 +274,6 @@
             </template>
         	</field>
 
-          <field xpath="/*/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints" or="resourceConstraints" in="/*/gmd:identificationInfo/gmd:MD_DataIdentification"/>
           <field xpath="/*/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo"/>
           <field xpath="/*/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialRepresentationType"/>
           <field xpath="/*/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialResolution"/>
