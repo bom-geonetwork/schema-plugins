@@ -1,8 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gco="http://www.isotc211.org/2005/gco"
-    xmlns:gmd="http://www.isotc211.org/2005/gmd" version="2.0">
+    xmlns:gmd="http://www.isotc211.org/2005/gmd" version="2.0"
+		xmlns:gn-fn-metadata="http://geonetwork-opensource.org/xsl/functions/metadata">
+
     <xsl:import href="../iso19139/update-fixed-info.xsl"/>
+
+		<!-- Template to retrieve codelist values combining with iso19115-2 and iso19139 to find
+       which url to assign to the codeList url -->
+
+	  <xsl:template name="getCodelistUrl">
+
+			<xsl:variable name="name" select="name()"/>
+			<xsl:variable name="localname" select="local-name()"/>
+			<xsl:variable name="codeListValue" select="@codeListValue"/>
+
+    	<xsl:variable name="wmoCodelists"        select="/root/env/schemas/iso19115-2.wmo-1.3/codelists/codelist[@name=$name]"/>
+    	<xsl:variable name="iso19115-2Codelists" select="/root/env/schemas/iso19115-2/codelists/codelist[@name=$name]"/>
+
+			<xsl:choose>
+				<xsl:when test="$wmoCodelists/entry/code=$codeListValue">
+					<xsl:value-of select="concat('http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#',$localname)"/>
+				</xsl:when>
+				<xsl:when test="$iso19115-2Codelists/entry/code=$codeListValue">
+					<xsl:value-of select="concat('http://www.ngdc.noaa.gov/metadata/published/xsd/schema/resources/Codelist/gmxCodelists.xml#',$localname)"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="concat('http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#',$localname)"/>
+				</xsl:otherwise>
+			</xsl:choose>
+				
+  	</xsl:template>
 
 
     <!-- Take priority over iso19139 -->
@@ -115,5 +143,18 @@
 				<gco:CharacterString>1.3</gco:CharacterString>
 			</xsl:copy>
 		</xsl:template>
+
+	<!-- ================================================================= -->
+  <!-- codelists: set @codeList path -->
+  <!-- ================================================================= -->
+
+  <xsl:template match="gmd:*[@codeListValue]|gmi:*[@codeListValue]" priority="3">
+    <xsl:copy>
+      <xsl:apply-templates select="@*"/>
+      <xsl:attribute name="codeList">
+				<xsl:call-template name="getCodelistUrl"/>
+      </xsl:attribute>
+    </xsl:copy>
+  </xsl:template>
 
 </xsl:stylesheet>
