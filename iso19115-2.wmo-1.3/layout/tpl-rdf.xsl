@@ -14,6 +14,7 @@
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
   xmlns:gco="http://www.isotc211.org/2005/gco" 
   xmlns:gmd="http://www.isotc211.org/2005/gmd"
+  xmlns:gmi="http://www.isotc211.org/2005/gmi"
   xmlns:srv="http://www.isotc211.org/2005/srv"
   xmlns:gml32="http://www.opengis.net/gml/3.2" 
   xmlns:ogc="http://www.opengis.net/rdf#"

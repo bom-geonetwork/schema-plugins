@@ -14,6 +14,7 @@
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
   xmlns:gco="http://www.isotc211.org/2005/gco" 
   xmlns:gmd="http://www.isotc211.org/2005/gmd"
+  xmlns:gmi="http://www.isotc211.org/2005/gmi"
   xmlns:srv="http://www.isotc211.org/2005/srv"
   xmlns:gml32="http://www.opengis.net/gml/3.2" 
   xmlns:ogc="http://www.opengis.net/rdf#"
@@ -403,45 +404,5 @@
       <void:dataDump></void:dataDump>-->
   </xsl:template>
   
-  
-  
-  
-  
-  
-  
-  
-  <!-- 
-    Get resource (dataset or service) identifier if set and return metadata UUID if not.
-  -->
-  <xsl:function name="iso19139:getResourceCode" as="xs:string">
-    <xsl:param name="metadata" as="node()"/>
-    
-    <xsl:value-of select="if ($metadata/gmd:identificationInfo/*/gmd:citation/*/gmd:identifier/*/gmd:code/gco:CharacterString!='')
-      then $metadata/gmd:identificationInfo/*/gmd:citation/*/gmd:identifier/*/gmd:code/gco:CharacterString 
-      else $metadata/gmd:fileIdentifier/gco:CharacterString"/>
-  </xsl:function>
-  
-  
-  <!-- 
-    Get thesaurus identifier, otherCitationDetails value, citation @id or thesaurus title.
-  -->
-  <xsl:function name="iso19139:getThesaurusCode" as="xs:string">
-    <xsl:param name="thesaurusName" as="node()"/>
-    
-    <xsl:value-of select="if ($thesaurusName/*/gmd:otherCitationDetails/*!='') then $thesaurusName/*/gmd:otherCitationDetails/*
-      else if ($thesaurusName/gmd:CI_Citation/@id!='') then $thesaurusName/gmd:CI_Citation/@id!=''
-      else encode-for-uri($thesaurusName/*/gmd:title/gco:CharacterString)"/>
-  </xsl:function>
-  
-  <!-- 
-    Get contact identifier (for the time being = email and node generated identifier if no email available)
-  -->
-  <xsl:function name="iso19139:getContactId" as="xs:string">
-    <xsl:param name="responsibleParty" as="node()"/>
-    
-    <xsl:value-of select="if ($responsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString!='')
-      then $responsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString
-      else generate-id($responsibleParty)"/>
-  </xsl:function>
   
 </xsl:stylesheet>
